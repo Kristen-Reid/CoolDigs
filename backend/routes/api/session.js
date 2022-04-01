@@ -5,6 +5,7 @@ const asyncHandler = require('express-async-handler');
 const { setTokenCookie, restoreUser } = require('../../utils/auth');
 const { User } = require('../../db/models');
 
+
 router.post('/', asyncHandler(async (req, res, next) => {
     const { credential, password } = req.body;
 
@@ -26,7 +27,15 @@ router.post('/', asyncHandler(async (req, res, next) => {
 router.delete('/', (_req, res) => {
     res.clearCookie('token');
     return res.json({ message: 'success' });
-})
+});
+
+router.get('/', restoreUser, (req, res) => {
+    const { user } = req;
+
+    if (user) return res.json({ user: user.toSafeObject() });
+    
+    else return res.json({});
+});
 
 
 module.exports = router;
