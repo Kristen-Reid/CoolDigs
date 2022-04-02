@@ -7,7 +7,7 @@ const LoginFormModal = () => {
 
     return (
         <>
-            <button onClick={() => setShowModal(true)}>Log In</button>
+            <a className='navLink' onClick={() => setShowModal(true)}>Log In</a>
             {showModal && (
                 <Modal onClose={() => setShowModal(false)}>
                     <LoginForm />
