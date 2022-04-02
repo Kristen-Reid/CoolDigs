@@ -17,19 +17,14 @@ const Navigation = ({ isLoaded }) => {
             <>
                 <LoginFormModal />
                 <SignupFormModal />
-
             </>
         );
     };
 
     return (
         <div>
-            <ul>
-                <li>
-                    <NavLink exact to='/'>Home</NavLink>
-                    {isLoaded && sessionLinks}
-                </li>
-            </ul>
+            <NavLink exact to='/'><button>Home</button></NavLink>
+            {isLoaded && sessionLinks}
         </div>
     )
 }

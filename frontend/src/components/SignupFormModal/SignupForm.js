@@ -27,8 +27,9 @@ const SignupForm = () => {
     }
 
     return (
-        <div>
+        <div className='signupContainer'>
             <form onSubmit={handleSubmit}>
+                <h2>CoolDigs</h2>
                 <ul>
                     {errors.map((error, idx) => <li key={idx}>{error}</li>)}
                 </ul>
@@ -77,7 +78,7 @@ const SignupForm = () => {
                     </label>
                 </div>
                 <div>
-                    <button type='submit'>Sign Up</button>
+                    <button type='submit' className='signupBtn'>Sign Up</button>
                 </div>
             </form>
         </div>

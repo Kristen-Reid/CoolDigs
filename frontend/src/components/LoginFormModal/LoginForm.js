@@ -22,12 +22,13 @@ const LoginForm = () => {
     }
 
     return (
-        <div>
+        <div className='loginContainer'>
+            <h2>CoolDigs</h2>
             <form onSubmit={handleSubmit}>
                 <ul>
                     {errors.map((error, idx) => <li key={idx}>{error}</li>)}
                 </ul>
-                <div>
+                <div className='credInput input'>
                     <label>
                     <input
                         type='text'
@@ -38,7 +39,7 @@ const LoginForm = () => {
                     />
                     </label>
                 </div>
-                <div>
+                <div className='passwordInput input'>
                     <label>
                     <input
                         type='password'
@@ -49,8 +50,8 @@ const LoginForm = () => {
                     />
                     </label>
                 </div>
-                <div>
-                    <button type='submit'>Log In</button>
+                <div className='submitBtnContainer'>
+                    <button type='submit' className='loginBtn'>Log In</button>
                 </div>
             </form>
         </div>

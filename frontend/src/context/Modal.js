@@ -2,6 +2,7 @@ import React, { useContext, useRef, useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './Modal.css';
 
+
 const ModalContext = React.createContext();
 
 export const ModalProvider = ({ children }) => {
@@ -29,7 +30,7 @@ export const Modal = ({ onClose, children }) => {
     return ReactDOM.createPortal(
         <div id='modal'>
             <div id='modal-background' onClick={onClose} />
-            <div id='modal-content'>
+            <div id='modal-content' className='modal-two'>
                 {children}
             </div>
         </div>,
