@@ -32,9 +32,10 @@ const SignupFormPage = () => {
         <div>
             <form onSubmit={handleSubmit}>
                 <ul>
-                    {errors.maps((error, idx) => <li key={idx}>{error}</li>)}
+                    {errors.map((error, idx) => <li key={idx}>{error}</li>)}
                 </ul>
-                <label>
+                <div>
+                    <label>
                     <input
                         type='text'
                         value={email}
@@ -42,26 +43,33 @@ const SignupFormPage = () => {
                         placeholder='Email'
                         required
                     />
-                </label>
-                <label>
-                    <input
-                        type='password'
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        placeholder='Password'
-                        required
-                    />
-                </label>
-                <label>
-                    <input
-                        type='password'
-                        value={confirmPassword}
-                        onChange={(e) => setConfirmPassword(e.target.value)}
-                        placeholder='Confirm Password'
-                        required
-                    />
-                </label>
-                <button type='submit'>Sign Up</button>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input
+                            type='password'
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            placeholder='Password'
+                            required
+                        />
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input
+                            type='password'
+                            value={confirmPassword}
+                            onChange={(e) => setConfirmPassword(e.target.value)}
+                            placeholder='Confirm Password'
+                            required
+                        />
+                    </label>
+                </div>
+                <div>
+                    <button type='submit'>Sign Up</button>
+                </div>
             </form>
         </div>
     )
