@@ -14,10 +14,10 @@ const Navigation = ({ isLoaded }) => {
         sessionLinks = (<ProfileButton user={sessionUser} />);
     } else {
         sessionLinks = (
-            <>
+            <div>
                 <LoginFormModal />
                 <SignupFormModal />
-            </>
+            </div>
         );
     };
 

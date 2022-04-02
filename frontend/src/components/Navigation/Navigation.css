@@ -1,8 +1,8 @@
 #navContainer {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    /* background-color: blue; */
+    justify-content: space-between;
+
 }
 
 .navLink{
@@ -18,7 +18,6 @@
 .homeBtn {
     font-size: 32px;
     font-family: 'Vazirmatn';
-    /* background-color: blue; */
 }
 
 a {
