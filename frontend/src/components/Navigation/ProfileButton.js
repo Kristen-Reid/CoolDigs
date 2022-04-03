@@ -32,7 +32,7 @@ const ProfileButton = ({ user }) => {
 
     return (
         <div>
-            <button onClick={openMenu}>Button
+            <button onClick={openMenu}>
                 <i className='fas fa-user-circle' />
             </button>
             {showMenu && (
