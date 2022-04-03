@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import SignupFormModal from '../SignupFormModal';
+import { ReactComponent as Logo } from '../../svgImg/logo.svg'
 import './Navigation.css';
 
 const Navigation = ({ isLoaded }) => {
@@ -23,7 +24,10 @@ const Navigation = ({ isLoaded }) => {
 
     return (
         <div id='navContainer'>
-            <NavLink exact to='/' className='homeBtn'>CoolDigs</NavLink>
+            <div className='logoContainer'>
+                <NavLink exact to='/' className='homeBtn'>CoolDigs</NavLink>
+                {<Logo />}
+            </div>
             {isLoaded && sessionLinks}
         </div>
     )

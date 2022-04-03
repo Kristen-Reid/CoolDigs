@@ -1,26 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+
 #navContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-
+    justify-content: space-around;
+    align-items: center;
 }
 
 .navLink{
     font-family: 'Vazirmatn';
-    margin: 5px
+    margin: 5px;
+    font-size: 18px;
 }
 
 .navLink:hover{
     font-size: 18px;
-    cursor:pointer
+    cursor:pointer;
+    border-bottom: 1px solid black;
 }
 
 .homeBtn {
     font-size: 32px;
-    font-family: 'Vazirmatn';
+    font-family: 'Fredoka One', cursive;
 }
 
 a {
     text-decoration: none;
     color: black;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
 }
