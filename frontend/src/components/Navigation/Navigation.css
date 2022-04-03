@@ -4,7 +4,7 @@
 #navContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -12,16 +12,18 @@
     font-family: 'Vazirmatn';
     margin: 5px;
     font-size: 18px;
+    margin: 20px;
 }
 
 .navLink:hover{
     cursor:pointer;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid rgb(184, 28, 28);
 }
 
 .homeBtn {
     font-size: 32px;
     font-family: 'Fredoka One', cursive;
+    margin-left: 20px;
 }
 
 a {
@@ -36,4 +38,8 @@ a {
 
 .logoContainer:hover{
     cursor:pointer;
+}
+
+.profileBtn{
+    border-radius: 20px;
 }

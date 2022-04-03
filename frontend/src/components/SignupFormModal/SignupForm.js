@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
+import { ReactComponent as Logo } from '../../svgImg/logo.svg';
 import './SignupForm.css';
 
 const SignupForm = () => {
@@ -29,7 +30,10 @@ const SignupForm = () => {
     return (
         <div className='signupContainer'>
             <form onSubmit={handleSubmit}>
-                <h2>CoolDigs</h2>
+                <div className='logoContainer'>
+                    <h2>CoolDigs</h2>
+                    {<Logo/> }
+                </div>
                 <ul>
                     {errors.map((error, idx) => <li key={idx}>{error}</li>)}
                 </ul>

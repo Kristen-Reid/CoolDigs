@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Vazirmatn:100,200,300,regular,500,600,700,800,900);
-
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 .loginContainer {
     display: flex;
@@ -12,7 +12,7 @@
 }
 
 h2 {
-    font-family: 'Vazirmatn';
+    font-family: 'Fredoka One';
     font-size: 32px;
 }
 
@@ -24,8 +24,27 @@ input {
 
 }
 
+input:hover {
+    cursor: pointer;
+}
+
+input:focus {
+    cursor: text;
+}
+
 .loginBtn {
     padding: 10px;
     width: 275px;
     border-radius: 8px;
+}
+
+.loginBtn:hover {
+    background-color: rgb(139, 17, 17);
+    color: white;
+    cursor: pointer;
+}
+
+.logoContainer {
+    align-items: center;
+    justify-content: center;
 }

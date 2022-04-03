@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Vazirmatn:100,200,300,regular,500,600,700,800,900);
+
+.profileContainer{
+    position: relative;
+    display: inline;
+}
+
+
+.profile-dropdown {
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 25px;
+    z-index: 1;
+    border: 1px black solid;
+    box-shadow: 1px 1px 1px;
+    border-radius: 6px;
+    padding: 8px;
+}
+
+.profileContainer:hover .profile-dropdown {
+    display: block;
+}
+
+.profileBtn{
+    margin: 20px;
+}
+
+.profileBtn:hover {
+    cursor: pointer;
+}
+
+.profile-dropdown:hover {
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    font-family: 'Vazirmatn';
+}
+
+
+li:hover {
+    box-shadow: 0px 1px 0px;
+}
+
+logoutBtn:hover{
+    border-bottom: 5px black;
+}

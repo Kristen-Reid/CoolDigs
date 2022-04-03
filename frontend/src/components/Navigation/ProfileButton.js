@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
-
+import { ReactComponent as ProfilePic } from '../../svgImg/profileImg.svg'
+import '../Navigation/Dropdown.css'
 
 
 const ProfileButton = ({ user }) => {
@@ -31,18 +32,22 @@ const ProfileButton = ({ user }) => {
     }
 
     return (
-        <div>
-            <button onClick={openMenu}>
-                <i className='fas fa-user-circle' />
-            </button>
+        <div className='profileContainer'>
+            <div className='profileBtn'>
+                <a onClick={openMenu} className='openMenu'>
+                    <ProfilePic/>
+                </a>
+            </div>
             {showMenu && (
-                <ul className='profile-dropdown'>
-                    <li>{user.username}</li>
-                    <li>{user.email}</li>
-                    <li>
-                        <button onClick={logout}>Log Out</button>
-                    </li>
-                </ul>
+                <div className='dropdownContainer'>
+                    <ul className='profile-dropdown'>
+                        <li>{user.username}</li>
+                        <li>{user.email}</li>
+                        <li>
+                            <a onClick={logout} className='logoutBtn'>Log Out</a>
+                        </li>
+                    </ul>
+                </div>
             )}
         </div>
     )

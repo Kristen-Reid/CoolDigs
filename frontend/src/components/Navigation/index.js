@@ -26,7 +26,7 @@ const Navigation = ({ isLoaded }) => {
         <div id='navContainer'>
             <div className='logoContainer'>
                 <NavLink exact to='/' className='homeBtn'>CoolDigs</NavLink>
-                <NavLink exact to='/'>{<Logo />}</NavLink>
+                <NavLink exact to='/' className='logo'>{<Logo />}</NavLink>
             </div>
             {isLoaded && sessionLinks}
         </div>

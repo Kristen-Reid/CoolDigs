@@ -13,3 +13,28 @@
     width: 275px;
     border-radius: 8px;
 }
+
+h2 {
+    font-family: 'Fredoka One';
+    font-size: 32px;
+}
+
+.logoContainer {
+    align-items: center;
+    justify-content: center;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+input:focus {
+    cursor: text;
+}
+
+
+.signupBtn:hover {
+    background-color: rgb(139, 17, 17);
+    color: white;
+    cursor: pointer;
+}

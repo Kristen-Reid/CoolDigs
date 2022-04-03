@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
+import { ReactComponent as Logo } from '../../svgImg/logo.svg';
 import './LoginForm.css'
 
 const LoginForm = () => {
@@ -23,7 +24,10 @@ const LoginForm = () => {
 
     return (
         <div className='loginContainer'>
-            <h2>CoolDigs</h2>
+            <div className='logoContainer'>
+                <h2>CoolDigs</h2>
+                {<Logo/> }
+            </div>
             <form onSubmit={handleSubmit}>
                 <ul>
                     {errors.map((error, idx) => <li key={idx}>{error}</li>)}
