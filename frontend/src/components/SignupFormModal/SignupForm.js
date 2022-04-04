@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
-import { ReactComponent as Logo } from '../../svgImg/logo.svg';
+import { ReactComponent as Logo } from '../../svgImg/logo-white.svg';
 import './SignupForm.css';
 
 const SignupForm = () => {

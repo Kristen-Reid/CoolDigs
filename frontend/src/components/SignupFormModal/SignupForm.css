@@ -6,12 +6,15 @@
     width: 320px;
     height: 460px;
     text-align: center;
+    background-color: black;
 }
 
 .signupBtn {
     padding: 10px;
     width: 275px;
     border-radius: 8px;
+    border: none;
+    font-family: 'Vazirmatn';
 }
 
 h2 {
@@ -22,6 +25,7 @@ h2 {
 .logoContainer {
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 input:hover {
@@ -34,7 +38,9 @@ input:focus {
 
 
 .signupBtn:hover {
-    background-color: rgb(139, 17, 17);
+    background-color: rgb(18, 18, 119);
     color: white;
+    font-weight: bold;
     cursor: pointer;
+    border: none;
 }

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const apiRouter = require('./api');
-const { environment } = require('../config');
+
 
 router.use('/api', apiRouter);
 
