@@ -10,13 +10,10 @@ const SpotsPage = () => {
     const spotsArr = Object.values(spots);
     console.log(spots)
 
-    // useEffect(() => {
-    //     dispatch(getSpots());
-    // }, [dispatch]);
 
     return (
         <div className='spotsPageContainer'>
-            <h2>Spots Page</h2>
+            <h2 className='spotsPageTitle'>Camping Spots</h2>
             <div className='spotsContainer'>
                 {spotsArr.map((spot) => (
                     <SpotsCard key={spot.id}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
 import { ReactComponent as ProfilePic } from '../../svgImg/profileImg.svg'
@@ -40,13 +41,17 @@ const ProfileButton = ({ user }) => {
             </div>
             {showMenu && (
                 <div className='dropdownContainer'>
-                    <ul className='profile-dropdown'>
-                        <li>{user.username}</li>
-                        <li>{user.email}</li>
-                        <li>
-                            <a onClick={logout} className='logoutBtn'>Log Out</a>
-                        </li>
-                    </ul>
+                    <div className='dropdownContent'>
+                        <div className='dropdownInfoContainer'>
+                            <li className='dropdownInfo'>{user.username}</li>
+                            <li className='dropdownInfo'>{user.email}</li>
+                        </div>
+                        <div className='dropdownBtnContainer'>
+                            <a className='dropdownList' onClick={logout}>Log Out</a>
+                            <NavLink className='dropdownList' to='/spots'>Camping Spots</NavLink>
+                            <NavLink className='dropdownList' to='/spots/new'>Add A New Spot</NavLink>
+                        </div>
+                    </div>
                 </div>
             )}
         </div>

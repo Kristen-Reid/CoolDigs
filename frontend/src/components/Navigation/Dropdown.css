@@ -5,19 +5,6 @@
     display: inline;
 }
 
-
-.profile-dropdown {
-    flex-direction: column;
-    position: absolute;
-    top: 40px;
-    right: 25px;
-    z-index: 1;
-    border: 1px black solid;
-    box-shadow: 1px 1px 1px;
-    border-radius: 6px;
-    padding: 8px;
-}
-
 .profileContainer:hover .profile-dropdown {
     display: block;
 }
@@ -34,16 +21,28 @@
     cursor: pointer;
 }
 
-ul {
-    list-style-type: none;
-    font-family: 'Vazirmatn';
+.dropdownInfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    display: flex;
+    border-radius: 4px;
+    justify-content: center;
+    width: 100%;
+    font-weight: bolder;
+    height: 75px;
+    box-shadow: 0 0px 5px;
 }
 
-
-li:hover {
-    box-shadow: 0px 1px 0px;
+.dropdownContent li:hover {
+    color: white;
+    font-weight: bold;
 }
 
-logoutBtn:hover{
-    border-bottom: 5px black;
+.dropdownBtnContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

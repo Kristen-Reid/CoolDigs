@@ -12,6 +12,7 @@ const SpotsForm = () => {
     const history = useHistory();
     const user = useSelector(state => state.session.user);
 
+
     const [title, setTitle] = useState('');
     const [city, setCity] = useState('');
     const [state, setState] = useState('');
@@ -35,10 +36,10 @@ const SpotsForm = () => {
             userId: user.id
         };
 
-        console.log(spotForm)
+
         let newSpot = await dispatch(createSpot(spotForm));
         if (newSpot) {
-            history.push(`/spots/${newSpot.id}`);
+            history.push(`/spots/${newSpot?.id}`);
             console.log(newSpot)
         }
     }

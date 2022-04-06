@@ -77,17 +77,6 @@ router.delete('/:id/delete', requireAuth, asyncHandler(async (req, res) => {
     return res.json(spot);
 }));
 
-// router.get('/:id', requireAuth, asyncHandler(async (req, res) => {
-//     const spotId = parseInt(req.params.id, 10);
-//     const spot = await Spot.findByPk(spotId, {
-//         include: [
-//             {
-//                 model: Image
-//             }
-//         ]
-//     });
 
-//     return res.json(spot);
-// }));
 
 module.exports = router;
