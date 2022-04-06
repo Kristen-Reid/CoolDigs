@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import App from './App';
 import { ModalProvider } from './context/Modal';
 
+
 import configureStore from './store';
 import * as sessionActions from './store/session';
 import { restoreCSRF, csrfFetch } from "./store/csrf";

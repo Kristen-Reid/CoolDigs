@@ -1,0 +1,28 @@
+.spotsPageContainer{
+    /* display: flex; */
+}
+
+.spotsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+    background-color: chartreuse;
+}
+
+.spotsBox{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    margin: 20px;
+    border-radius: 16px;
+    background-color: hotpink;
+}
+
+.spotsContainer2{
+ display: flex;
+ background-color: blue;
+}

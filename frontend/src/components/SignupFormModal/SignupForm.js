@@ -31,7 +31,7 @@ const SignupForm = () => {
         <div className='signupContainer'>
             <form onSubmit={handleSubmit}>
                 <div className='logoContainer'>
-                    <h2>CoolDigs</h2>
+                    <h2 className='logoName'>CoolDigs</h2>
                     {<Logo/> }
                 </div>
                 <ul>

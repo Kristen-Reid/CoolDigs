@@ -4,8 +4,9 @@ import { useDispatch } from 'react-redux';
 import * as sessionActions from './store/session';
 import Navigation from './components/Navigation';
 import HomePage from './components/HomePage';
-import SpotsForm from './components/SpotsPage';
+// import SpotsForm from './components/SpotsPage';
 import SpotsPage from './components/SpotsPage';
+
 
 function App() {
   const dispatch = useDispatch();
