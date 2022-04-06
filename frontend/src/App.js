@@ -7,6 +7,7 @@ import HomePage from './components/HomePage';
 import SpotsForm from './components/SpotsPage/SpotsForm';
 import SpotsPage from './components/SpotsPage';
 import SpotDetail from './components/SpotDetails';
+import { getSpots } from './store/spots';
 
 
 function App() {
@@ -15,7 +16,9 @@ function App() {
 
   useEffect(() => {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
+    dispatch(getSpots());
   }, [dispatch]);
+
 
   return (
      <>

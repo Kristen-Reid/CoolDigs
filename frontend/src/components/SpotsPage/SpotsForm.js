@@ -21,10 +21,6 @@ const SpotsForm = () => {
     const [image, setImage] = useState('');
 
 
-    useEffect(() => {
-        dispatch(getSpots());
-    }, [dispatch]);
-
     const onSubmit = async (e) => {
         e.preventDefault();
 
@@ -45,8 +41,6 @@ const SpotsForm = () => {
             history.push(`/spots/${newSpot.id}`);
             console.log(newSpot)
         }
-
-
     }
 
     return (

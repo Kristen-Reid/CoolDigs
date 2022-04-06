@@ -1,7 +1,9 @@
-/* .spotPageContainer {
+.spotPageContainer {
     display: flex;
     flex-direction: column;
-} */
+    align-items: center;
+    /* background-color: blue; */
+}
 
 .imageContainer {
     display: flex;

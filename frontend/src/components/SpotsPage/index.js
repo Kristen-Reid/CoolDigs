@@ -10,9 +10,9 @@ const SpotsPage = () => {
     const spotsArr = Object.values(spots);
     console.log(spots)
 
-    useEffect(() => {
-        dispatch(getSpots());
-    }, [dispatch]);
+    // useEffect(() => {
+    //     dispatch(getSpots());
+    // }, [dispatch]);
 
     return (
         <div className='spotsPageContainer'>
