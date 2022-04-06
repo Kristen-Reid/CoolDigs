@@ -38,15 +38,8 @@ router.put('/:id/edit', requireAuth, asyncHandler(async (req, res) => {
         ]
     });
 
-    const {
-        title,
-        city,
-        state,
-        locationName,
-        price,
-        description,
-        image
-    } = req.body;
+    const { title,
+        city, state, locationName, price, description, image } = req.body;
 
     if (spot) {
                 spot.title = title,
@@ -56,11 +49,10 @@ router.put('/:id/edit', requireAuth, asyncHandler(async (req, res) => {
                 spot.price = price,
                 spot.description = description,
                 spot.image = image
-
-                await spot.save();
-                return res.json(spot);
     }
 
+    await spot.save();
+    return res.json(spot);
 }));
 
 
@@ -76,7 +68,5 @@ router.delete('/:id/delete', requireAuth, asyncHandler(async (req, res) => {
 
     return res.json(spot);
 }));
-
-
 
 module.exports = router;

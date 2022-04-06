@@ -13,7 +13,7 @@ const EditSpotDetails = ({spots}) => {
     console.log(useParams())
     const user = useSelector(state => state.session.user);
     const spot = useSelector(state => state.spots[id]);
-    console.log()
+
 
     const [title, setTitle] = useState('');
     const [city, setCity] = useState('');
@@ -28,8 +28,8 @@ const EditSpotDetails = ({spots}) => {
         e.preventDefault();
 
         const spotForm = {
-            ...spots,
-            // spotId: spot?.id,
+            // ...spots,
+            spotId: spot?.id,
             title,
             city,
             state,
