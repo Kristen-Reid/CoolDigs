@@ -39,7 +39,8 @@ const SignupForm = () => {
                 </ul>
                 <div>
                     <label>
-                    <input
+                        <input
+                        className='modalInput'
                         type='text'
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
@@ -50,7 +51,8 @@ const SignupForm = () => {
                 </div>
                 <div>
                   <label>
-                    <input
+                        <input
+                        className='modalInput'
                         type="text"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
@@ -62,6 +64,7 @@ const SignupForm = () => {
                 <div>
                     <label>
                         <input
+                            className='modalInput'
                             type='password'
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
@@ -73,6 +76,7 @@ const SignupForm = () => {
                 <div>
                     <label>
                         <input
+                            className='modalInput'
                             type='password'
                             value={confirmPassword}
                             onChange={(e) => setConfirmPassword(e.target.value)}

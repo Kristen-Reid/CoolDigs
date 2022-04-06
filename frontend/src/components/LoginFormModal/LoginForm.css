@@ -19,7 +19,7 @@
     font-size: 32px;
 }
 
-input {
+.modalInput {
     padding: 10px;
     margin: 0px 0px 10px 0px;
     width: 250px;
@@ -28,11 +28,11 @@ input {
     font-family: 'Vazirmatn';
 }
 
-input:hover {
+.modalInput:hover {
     cursor: pointer;
 }
 
-input:focus {
+.modalInput:focus {
     cursor: text;
 }
 

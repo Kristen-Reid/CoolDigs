@@ -1,0 +1,15 @@
+/* .spotPageContainer {
+    display: flex;
+    flex-direction: column;
+} */
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.spotImg {
+    width: 700px;
+    height: 500px;
+    border: 5px solid black;
+}

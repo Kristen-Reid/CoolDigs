@@ -23,8 +23,9 @@
 
 .homeBtn {
     font-size: 32px;
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Fredoka One';
     margin-left: 20px;
+    color: black;
 }
 
 a {

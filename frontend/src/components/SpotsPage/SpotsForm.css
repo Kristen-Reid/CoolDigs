@@ -1,0 +1,53 @@
+@import url(https://fonts.googleapis.com/css?family=Vazirmatn:100,200,300,regular,500,600,700,800,900);
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+.spotsFormPageContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.spotsFormContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 550px;
+    text-align: center;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+}
+
+.spotsInput {
+    padding: 10px;
+    margin: 0px 0px 10px 0px;
+    width: 250px;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Vazirmatn';
+}
+
+.spotsInput:hover {
+    cursor: pointer;
+}
+
+.spotsInput:focus {
+    cursor: text;
+}
+
+.postBtn {
+    padding: 10px;
+    width: 275px;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Vazirmatn';
+}
+
+.postBtn:hover {
+    background-color: rgb(18, 18, 119);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}

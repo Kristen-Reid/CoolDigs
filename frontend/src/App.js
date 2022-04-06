@@ -4,8 +4,9 @@ import { useDispatch } from 'react-redux';
 import * as sessionActions from './store/session';
 import Navigation from './components/Navigation';
 import HomePage from './components/HomePage';
-// import SpotsForm from './components/SpotsPage';
+import SpotsForm from './components/SpotsPage/SpotsForm';
 import SpotsPage from './components/SpotsPage';
+import SpotDetail from './components/SpotDetails';
 
 
 function App() {
@@ -23,8 +24,14 @@ function App() {
         <Route exact path='/'>
           <HomePage />
         </Route>
-        <Route path='/spots'>
+        <Route exact path='/spots'>
           <SpotsPage />
+        </Route>
+        <Route path='/spots/new'>
+          <SpotsForm />
+        </Route>
+        <Route path='/spots/:id'>
+          <SpotDetail />
         </Route>
       </Switch>
     </>

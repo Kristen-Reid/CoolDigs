@@ -2,26 +2,22 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* background-color: chartreuse; */
 }
 
 .spotsBox{
     display: flex;
     flex-direction: column;
-    align-items: center;
     border: 2px solid black;
     margin: 20px;
     border-radius: 16px;
     background-color: white;
+
 }
 
 
-
 .imageBox{
-    width: 100%;
-    height: 200px;
-    border-radius: 16px 16px 0 0;
-    border: 2px solid black;
+    width: 380px;
+    border-radius: 14px 14px 0 0;
     background-color: yellowgreen;
 }
 
@@ -29,6 +25,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding-left: 10px;
 }
 
 

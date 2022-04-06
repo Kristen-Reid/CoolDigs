@@ -8,11 +8,11 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      images: {
+      image: {
         allowNull: false,
         type: Sequelize.STRING(255)
       },
-      spotsId: {
+      spotId: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {model: 'Spots'}

@@ -25,7 +25,7 @@ const LoginForm = () => {
     return (
         <div className='loginContainer'>
             <div className='logoContainer'>
-                <h2>CoolDigs</h2>
+                <h2 className='logoName'>CoolDigs</h2>
                 {<Logo/> }
             </div>
             <form onSubmit={handleSubmit}>
@@ -34,7 +34,8 @@ const LoginForm = () => {
                 </ul>
                 <div className='credInput input'>
                     <label>
-                    <input
+                        <input
+                        className='modalInput'
                         type='text'
                         value={credential}
                         onChange={(e) => setCredential(e.target.value)}
@@ -45,7 +46,8 @@ const LoginForm = () => {
                 </div>
                 <div className='passwordInput input'>
                     <label>
-                    <input
+                        <input
+                        className='modalInput'
                         type='password'
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}

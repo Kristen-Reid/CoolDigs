@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 .signupContainer{
     display: flex;
     flex-direction: column;
@@ -29,11 +31,11 @@
     color: white;
 }
 
-input:hover {
+.modalInput:hover {
     cursor: pointer;
 }
 
-input:focus {
+.modalInput:focus {
     cursor: text;
 }
 

@@ -20,6 +20,7 @@ const SpotsPage = () => {
             <div className='spotsContainer'>
                 {spotsArr.map((spot) => (
                     <SpotsCard key={spot.id}
+                        id={spot.id}
                         title={spot.title}
                         locationName={spot.locationName}
                         city={spot.city}

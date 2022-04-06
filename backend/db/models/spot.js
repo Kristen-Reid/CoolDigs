@@ -2,6 +2,7 @@
 module.exports = (sequelize, DataTypes) => {
   const Spot = sequelize.define('Spot', {
     title: DataTypes.STRING,
+    city: DataTypes.STRING,
     state: DataTypes.STRING,
     locationName: DataTypes.STRING,
     price: DataTypes.DECIMAL,
@@ -10,7 +11,12 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Spot.associate = function (models) {
-    // associations can be defined here
+    Spot.belongsTo(models.User, { foreignKey: 'userId' });
+    Spot.hasMany(models.Image, {
+      foreignKey: 'spotId',
+      hooks: true,
+      onDelete: 'cascade'
+    });
   }
 
   return Spot;
