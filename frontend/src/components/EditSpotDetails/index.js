@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { createSpot } from '../../store/spots';
-import { useHistory } from 'react-router-dom';
+import { updateSpot } from '../../store/spots';
+import { useHistory, useParams } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../svgImg/logo-white.svg';
-import '../SpotsPage/SpotsForm.css'
+import '../EditSpotDetails/EditSpot.css';
 
 
-
-const SpotsForm = () => {
+const EditSpotDetails = ({spots}) => {
     const dispatch = useDispatch();
     const history = useHistory();
+    const { id } = useParams();
+    console.log(useParams())
     const user = useSelector(state => state.session.user);
-
+    const spot = useSelector(state => state.spots[id]);
+    console.log()
 
     const [title, setTitle] = useState('');
     const [city, setCity] = useState('');
@@ -26,6 +28,8 @@ const SpotsForm = () => {
         e.preventDefault();
 
         const spotForm = {
+            ...spots,
+            // spotId: spot?.id,
             title,
             city,
             state,
@@ -37,9 +41,10 @@ const SpotsForm = () => {
         };
 
 
-        let newSpot = await dispatch(createSpot(spotForm));
-        if (newSpot) {
-            history.push(`/spots/${newSpot?.id}`);
+        let update = await dispatch(updateSpot(spotForm));
+        console.log(update)
+        if (update) {
+            history.push(`/spots/${update?.id}`);
         }
     }
 
@@ -124,4 +129,4 @@ const SpotsForm = () => {
     )
 }
 
-export default SpotsForm;
+export default EditSpotDetails;

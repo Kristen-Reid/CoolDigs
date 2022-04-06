@@ -7,6 +7,7 @@ import HomePage from './components/HomePage';
 import SpotsForm from './components/SpotsPage/SpotsForm';
 import SpotsPage from './components/SpotsPage';
 import SpotDetail from './components/SpotDetails';
+import EditSpotDetails from './components/EditSpotDetails';
 import { getSpots } from './store/spots';
 
 
@@ -33,8 +34,11 @@ function App() {
         <Route path='/spots/new'>
           <SpotsForm />
         </Route>
-        <Route path='/spots/:id'>
+        <Route exact path='/spots/:id'>
           <SpotDetail />
+        </Route>
+        <Route path='/spots/:id/edit'>
+          <EditSpotDetails />
         </Route>
       </Switch>
     </>
