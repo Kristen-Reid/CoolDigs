@@ -62,14 +62,12 @@ const LoginForm = () => {
                     />
                     </label>
                 </div>
-                <div className='submitBtnContainer'>
-                    <button type='submit' className='loginBtn'>Log In</button>
-                </div>
-                <div>
-                    <button type='submit' className='demoBtn'
-                        onClick={ async ()=> demo()}
-                    >Demo Login</button>
-                </div>
+                    <div className='BtnContainer'>
+                        <button type='submit' className='loginBtn'>Log In</button>
+                        <button type='submit' className='demoBtn'
+                            onClick={ async ()=> demo()}
+                        >Demo Login</button>
+                    </div>
             </form>
         </div>
     )

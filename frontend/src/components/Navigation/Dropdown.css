@@ -33,6 +33,7 @@
     font-weight: bolder;
     height: 75px;
     box-shadow: 0 0px 5px;
+    background-color: rgba(0, 0, 0, .5);
 }
 
 .dropdownContent li:hover {

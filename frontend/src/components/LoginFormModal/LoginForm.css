@@ -38,10 +38,19 @@
 
 .loginBtn {
     padding: 10px;
-    width: 275px;
+    width: 274px;
     border-radius: 8px;
     border: none;
     font-family: 'Vazirmatn';
+}
+
+.demoBtn {
+    padding: 10px;
+    width: 274px;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Vazirmatn';
+    margin: 10px 0 0 0;
 }
 
 .loginBtn:hover {
@@ -52,7 +61,21 @@
     border: none;
 }
 
+.demoBtn:hover {
+    background-color: rgb(67, 16, 148);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
 .logoContainer {
     align-items: center;
     justify-content: center;
+}
+
+.BtnContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

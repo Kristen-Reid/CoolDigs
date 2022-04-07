@@ -21,10 +21,12 @@ const SpotDetail = () => {
                 <h2>{spot?.title}</h2>
                 <p>{`$${spot?.price}`}</p>
                 <p>{`${spot?.city}, ${spot?.state}`}</p>
+                <p>{`${spot?.description}`}</p>
+                <img src={`${spot?.image}`}/>
             </div>
-            <div>
-                <button><a href={`/spots/${spot?.id}/edit`}>Edit Spot</a></button>
-                 <button onClick={() => dispatch(deleteSpot(id)) }><a href={`/spots/`}>Delete Spot</a></button>
+            <div className='spotsBtnContainer'>
+                <button className='spotsEditBtn'><a className='spotsBtnTxt' href={`/spots/${spot?.id}/edit`}>Edit Spot</a></button>
+                 <button className='spotsDeleteBtn' onClick={() => dispatch(deleteSpot(id)) }><a className='spotsBtnTxt' href={`/spots/`}>Delete Spot</a></button>
             </div>
         </div>
     )

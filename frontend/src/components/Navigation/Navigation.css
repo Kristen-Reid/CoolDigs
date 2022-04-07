@@ -40,7 +40,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: white;
     display: flex;
     border-radius: 4px;
     justify-content: center;
@@ -48,6 +48,8 @@ a {
     height: 75px;
     font-size: 18px;
     font-weight: bolder;
+    background-color: rgba(0, 0, 0, .4);
+
 }
 
 .dropdownList:hover {
