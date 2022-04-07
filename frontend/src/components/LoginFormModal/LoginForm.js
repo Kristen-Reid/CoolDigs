@@ -10,9 +10,7 @@ const LoginForm = () => {
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState([]);
 
-    const loginDemo = () => {
-        processForm({credential: ''})
-    }
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setErrors([]);
@@ -22,7 +20,11 @@ const LoginForm = () => {
                 const data = await res.json();
                 if (data && data.errors) setErrors(data.errors);
             });
-    }
+        }
+
+        const demo = async () => {
+            return await dispatch(sessionActions.login({ 'credential': 'Demo-lition', 'password': 'password' }))
+        }
 
     return (
         <div className='loginContainer'>
@@ -65,7 +67,7 @@ const LoginForm = () => {
                 </div>
                 <div>
                     <button type='submit' className='demoBtn'
-                        onClick={() => {}
+                        onClick={ async ()=> demo()}
                     >Demo Login</button>
                 </div>
             </form>

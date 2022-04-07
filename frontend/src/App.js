@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import * as sessionActions from './store/session';
 import Navigation from './components/Navigation';
 import HomePage from './components/HomePage';
@@ -13,6 +13,7 @@ import { getSpots } from './store/spots';
 
 function App() {
   const dispatch = useDispatch();
+  const user = useSelector(state => state.session.user);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -28,9 +29,13 @@ function App() {
         <Route exact path='/'>
           <HomePage />
         </Route>
-        <Route exact path='/spots'>
-          <SpotsPage />
-        </Route>
+        { user !== undefined ?
+          <Route exact path='/spots'>
+            <SpotsPage />
+          </Route> :
+          <Route>
+            <HomePage />
+          </Route> }
         <Route path='/spots/new'>
           <SpotsForm />
         </Route>

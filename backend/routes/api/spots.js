@@ -38,8 +38,7 @@ router.put('/:id/edit', requireAuth, asyncHandler(async (req, res) => {
         ]
     });
 
-    const { title,
-        city, state, locationName, price, description, image } = req.body;
+    const { title, city, state, locationName, price, description, image } = req.body;
 
     if (spot) {
                 spot.title = title,
