@@ -28,8 +28,7 @@ const EditSpotDetails = ({spots}) => {
         e.preventDefault();
 
         const spotForm = {
-            // ...spots,
-            spotId: spot?.id,
+            id: spot?.id,
             title,
             city,
             state,
@@ -42,7 +41,6 @@ const EditSpotDetails = ({spots}) => {
 
 
         let update = await dispatch(updateSpot(spotForm));
-        console.log(update)
         if (update) {
             history.push(`/spots/${update?.id}`);
         }

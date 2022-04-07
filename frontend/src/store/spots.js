@@ -58,7 +58,7 @@ export const updateSpot = (data) => async (dispatch) => {
         body: JSON.stringify(data)
     });
 
-    if(response.ok) {
+    if (response.ok) {
         const spot = await response.json();
         dispatch(update(spot));
         return spot;
