@@ -9,7 +9,8 @@ const SpotDetail = () => {
     const dispatch = useDispatch();
     const { id } = useParams();
 
-
+    const user = useSelector(state => state.session.user);
+    console.log(user)
     const spot = useSelector(state => state.spots[id]);
 
     return (
@@ -22,12 +23,18 @@ const SpotDetail = () => {
                 <p>{`$${spot?.price}`}</p>
                 <p>{`${spot?.city}, ${spot?.state}`}</p>
                 <p>{`${spot?.description}`}</p>
-                <img src={`${spot?.image}`}/>
-            </div>
-            <div className='spotsBtnContainer'>
-                <button className='spotsEditBtn'><a className='spotsBtnTxt' href={`/spots/${spot?.id}/edit`}>Edit Spot</a></button>
-                 <button className='spotsDeleteBtn' onClick={() => dispatch(deleteSpot(id)) }><a className='spotsBtnTxt' href={`/spots/`}>Delete Spot</a></button>
-            </div>
+                <div>
+                    {spot?.Images?.map(image => (
+                        <img key={image?.id} src={image?.image} alt={spot?.name}/>
+                    ))}
+                </div>
+                </div>
+                {user?.id === spot?.userId && (
+                <div className='spotsBtnContainer'>
+                    <button className='spotsEditBtn'><a className='spotsBtnTxt' href={`/spots/${spot?.id}/edit`}>Edit Spot</a></button>
+                    <button className='spotsDeleteBtn' onClick={() => dispatch(deleteSpot(id)) }><a className='spotsBtnTxt' href={`/spots/`}>Delete Spot</a></button>
+                </div>
+                )}
         </div>
     )
 }

@@ -24,8 +24,44 @@ router.post('/new', requireAuth, asyncHandler(async (req, res) => {
         image: req.body.image,
         spotId: spot.id
     });
-    return res.json(spot);
+
+    const oneSpot = await Spot.findByPk(spot.id, {
+        include: [
+            {
+                model: Image
+            }
+        ]
+    });
+
+    return res.json(oneSpot);
 }));
+
+
+// router.put('/:id/edit', requireAuth, asyncHandler(async (req, res) => {
+//     const spotId = parseInt(req.params.id, 10);
+//     const spot = await Spot.findByPk(spotId, {
+//         include: [
+//             {
+//                 model: Image
+//             }
+//         ]
+//     });
+
+//     const { title, city, state, locationName, price, description, image } = req.body;
+
+//     if (spot) {
+//                 spot.title = title,
+//                 spot.city = city,
+//                 spot.state = state,
+//                 spot.locationName = locationName,
+//                 spot.price = price,
+//                 spot.description = description,
+//                 spot.image = image
+//     }
+
+//     await spot.save();
+//     return res.json(spot);
+// }));
 
 
 router.put('/:id/edit', requireAuth, asyncHandler(async (req, res) => {
@@ -37,20 +73,12 @@ router.put('/:id/edit', requireAuth, asyncHandler(async (req, res) => {
             }
         ]
     });
-
-    const { title, city, state, locationName, price, description, image } = req.body;
-
-    if (spot) {
-                spot.title = title,
-                spot.city = city,
-                spot.state = state,
-                spot.locationName = locationName,
-                spot.price = price,
-                spot.description = description,
-                spot.image = image
-    }
-
-    await spot.save();
+    await spot.update(req.body);
+    const image = await Image.findAll()
+    await image.update({
+        images: req.body.image,
+        spotId: spot.id
+    });
     return res.json(spot);
 }));
 
