@@ -54,7 +54,7 @@ export const createSpot = (data) => async (dispatch) => {
 export const updateSpot = (data) => async (dispatch) => {
     const response = await csrfFetch(`/api/spots/${data.id}/edit`, {
         method: 'PUT',
-        headers: { 'Content-Type': 'appliction/json' },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
     });
 

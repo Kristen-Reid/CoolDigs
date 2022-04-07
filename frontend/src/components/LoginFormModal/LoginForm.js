@@ -10,7 +10,9 @@ const LoginForm = () => {
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState([]);
 
-
+    const loginDemo = () => {
+        processForm({credential: ''})
+    }
     const handleSubmit = async (e) => {
         e.preventDefault();
         setErrors([]);
@@ -35,6 +37,7 @@ const LoginForm = () => {
                 <div className='credInput input'>
                     <label>
                         <input
+                        id='credential'
                         className='modalInput'
                         type='text'
                         value={credential}
@@ -47,6 +50,7 @@ const LoginForm = () => {
                 <div className='passwordInput input'>
                     <label>
                         <input
+                        id='password'
                         className='modalInput'
                         type='password'
                         value={password}
@@ -58,6 +62,11 @@ const LoginForm = () => {
                 </div>
                 <div className='submitBtnContainer'>
                     <button type='submit' className='loginBtn'>Log In</button>
+                </div>
+                <div>
+                    <button type='submit' className='demoBtn'
+                        onClick={() => {}
+                    >Demo Login</button>
                 </div>
             </form>
         </div>
