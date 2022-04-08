@@ -6,7 +6,6 @@ import '../SpotsPage/SpotsPage.css';
 const SpotsPage = () => {
     const spots = useSelector(state => state.spots);
     const spotsArr = Object.values(spots);
-    console.log(spotsArr)
 
 
     return (
@@ -16,7 +15,7 @@ const SpotsPage = () => {
                 {spotsArr.map((spot) => (
                     <SpotsCard key={spot.id}
                         id={spot.id}
-                        image={spot.image}
+                        image={spot?.Images[0]?.image}
                         title={spot.title}
                         locationName={spot.locationName}
                         city={spot.city}

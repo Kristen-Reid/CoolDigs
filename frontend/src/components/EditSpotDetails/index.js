@@ -33,10 +33,10 @@ const EditSpotDetails = () => {
         setLocationName(spots[id]?.locationName)
         setPrice(spots[id]?.price)
         setDescription(spots[id]?.description)
-        // setImage(spots[id]?.image)
+        setImage(spots[id]?.Images[0].image)
     }, [spots])
 
-    console.log(spots[id])
+    // console.log(spots[id]?.Images[0].image)
 
 
     useEffect(() => {

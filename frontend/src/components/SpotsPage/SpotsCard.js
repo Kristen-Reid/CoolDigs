@@ -1,12 +1,14 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
+
 
 const SpotsCard = ({id, title, locationName, city, state, price, image}) => {
+    const history = useHistory();
 
     return (
-        <div className='spotsBox'>
-            <a href={`/spots/${id}`}>
+        <div className='spotsBox' onClick={() => history.push(`/spots/${id}`)}>
                     <div className='imageBox'>
-                    <img className='spotsImage' scr={image} alt='image'/>
+                    <img className='spotsImage' src={image} alt='image'/>
                     </div>
                     <div className='spotsInfoContainer'>
                     <div className='spotsTitle'>
@@ -19,7 +21,6 @@ const SpotsCard = ({id, title, locationName, city, state, price, image}) => {
                         <p>{`$${price}`}</p>
                     </div>
                 </div>
-            </a>
         </div>
     )
 }
