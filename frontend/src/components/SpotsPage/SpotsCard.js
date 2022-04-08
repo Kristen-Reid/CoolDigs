@@ -1,12 +1,12 @@
 import React from 'react';
 
-const SpotsCard = ({id, title, locationName, city, state, price}) => {
+const SpotsCard = ({id, title, locationName, city, state, price, image}) => {
 
     return (
         <div className='spotsBox'>
             <a href={`/spots/${id}`}>
                     <div className='imageBox'>
-                        <img className='spotsImage'/>
+                    <img className='spotsImage' scr={image} alt='image'/>
                     </div>
                     <div className='spotsInfoContainer'>
                     <div className='spotsTitle'>

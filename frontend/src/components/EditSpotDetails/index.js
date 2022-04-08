@@ -6,11 +6,10 @@ import { ReactComponent as Logo } from '../../svgImg/logo-white.svg';
 import '../EditSpotDetails/EditSpot.css';
 
 
-const EditSpotDetails = ({spots}) => {
+const EditSpotDetails = () => {
     const dispatch = useDispatch();
     const history = useHistory();
     const { id } = useParams();
-    console.log(useParams())
     const user = useSelector(state => state.session.user);
     const spot = useSelector(state => state.spots[id]);
 
@@ -22,7 +21,30 @@ const EditSpotDetails = ({spots}) => {
     const [price, setPrice] = useState('');
     const [description, setDescription] = useState('');
     const [image, setImage] = useState('');
+    const [validationErrors, setValidationErrors] = useState([]);
 
+    useEffect(() => {
+        const errors = [];
+
+        // const validImage = /\.(jpg|jpeg|png|gif)$/
+        const validPrice = /^[0-9]*\.?[0-9]*$/
+
+        if (!title.length) errors.push('Please provide a title');
+        if (title.length > 100) errors.push('Title must be no greater than 100 characters.');
+        if (!city.length) errors.push('Please provide a city');
+        if (city.length > 50) errors.push('City must be no greater than 50 characters.');
+        if (!state.length) errors.push('Please provide a state');
+        if (state.length > 50) errors.push('State must be no greater than 50 characters.');
+        if (!locationName.length) errors.push('Please provide a location name');
+        if (title.length > 50) errors.push('Location name must be no greater than 50 characters.');
+        if (!price) errors.push('Please provide a price');
+        if (!validPrice.test(price) && price.length > 6) errors.push('Please provide a valid price')
+        if (!description.length) errors.push('Please provide a description');
+        if (!image.length) errors.push('Please provide a URL for image');
+        if (!image.match(/\.(jpg|jpeg|png|gif)$/)) errors.push('Please provide a valid image');
+
+        setValidationErrors(errors);
+    }, [title, city, state, locationName, price, description, image])
 
     const onSubmit = async (e) => {
         e.preventDefault();
@@ -55,6 +77,13 @@ const EditSpotDetails = ({spots}) => {
                     {<Logo/> }
                 </div>
                 <form onSubmit={onSubmit}>
+                    {
+                        <ul className="errors">
+                        {validationErrors.map(error => (
+                            <li key={error}>{error}</li>
+                            ))}
+                        </ul>
+                    }
                     <div>
                         <input
                             className='spotsInput'

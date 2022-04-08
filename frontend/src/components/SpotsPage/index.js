@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import SpotsCard from './SpotsCard';
-import { getSpots } from '../../store/spots';
 import '../SpotsPage/SpotsPage.css';
 
 const SpotsPage = () => {
-    const dispatch = useDispatch();
     const spots = useSelector(state => state.spots);
     const spotsArr = Object.values(spots);
-    console.log(spots)
+    console.log(spotsArr)
 
 
     return (
@@ -18,6 +16,7 @@ const SpotsPage = () => {
                 {spotsArr.map((spot) => (
                     <SpotsCard key={spot.id}
                         id={spot.id}
+                        image={spot.image}
                         title={spot.title}
                         locationName={spot.locationName}
                         city={spot.city}

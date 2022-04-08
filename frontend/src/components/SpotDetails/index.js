@@ -10,7 +10,6 @@ const SpotDetail = () => {
     const { id } = useParams();
 
     const user = useSelector(state => state.session.user);
-    console.log(user)
     const spot = useSelector(state => state.spots[id]);
 
     return (
