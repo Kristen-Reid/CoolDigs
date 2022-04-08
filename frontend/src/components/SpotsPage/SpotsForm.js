@@ -23,27 +23,28 @@ const SpotsForm = () => {
     const [validationErrors, setValidationErrors] = useState([]);
 
 
-    // useEffect(() => {
-    //     const errors = [];
+    useEffect(() => {
+        const errors = [];
 
-    //     const validImage = /\.(jpg|jpeg|png|gif)$/
-    //     const validPrice = /^[^a-zA-Z][0-9]*\.?[0-9]*$/
+        const validImage = /\.(jpg|jpeg|png|gif)$/
+        const validPrice = /^[^a-zA-Z][0-9]*\.?[0-9]*$/
 
-    //     if (!title.length) errors.push('Please provide a title');
-    //     if (title.length > 100) errors.push('Title must be no greater than 100 characters.');
-    //     if (!city.length) errors.push('Please provide a city');
-    //     if (city.length > 50) errors.push('City must be no greater than 50 characters.');
-    //     if (!state.length) errors.push('Please provide a state');
-    //     if (state.length > 50) errors.push('State must be no greater than 50 characters.');
-    //     if (!locationName.length) errors.push('Please provide a location name');
-    //     if (title.length > 50) errors.push('Location name must be no greater than 50 characters.');
-    //     if (!price) errors.push('Please provide a price');
-    //     if (!validPrice.test(price) || price.length > 6) errors.push('Please provide a valid price')
-    //     if (!description.length) errors.push('Please provide a description');
-    //     if (!image.length) errors.push('Please provide a URL for image');
+        if (!title.length) errors.push('Please provide a title');
+        if (title.length > 100) errors.push('Title must be no greater than 100 characters.');
+        if (!city.length) errors.push('Please provide a city');
+        if (city.length > 50) errors.push('City must be no greater than 50 characters.');
+        if (!state.length) errors.push('Please provide a state');
+        if (state.length > 50) errors.push('State must be no greater than 50 characters.');
+        if (!locationName.length) errors.push('Please provide a location name');
+        if (title.length > 50) errors.push('Location name must be no greater than 50 characters.');
+        if (!price) errors.push('Please provide a price');
+        if (!validPrice.test(price) || price.length > 6) errors.push('Please provide a valid price');
+        if (!description.length) errors.push('Please provide a description');
+        if (!image.length) errors.push('Please provide a URL for image');
+        if (!validImage.test(image)) errors.push('Please provide a valid image');
 
-    //     setValidationErrors(errors);
-    // }, [title, city, state, locationName, price, description, image])
+        setValidationErrors(errors);
+    }, [title, city, state, locationName, price, description, image])
 
 
     const onSubmit = async (e) => {
@@ -70,6 +71,15 @@ const SpotsForm = () => {
     return (
         <div className='spotsFormPageContainer'>
             <div className='spotsFormContainer'>
+            <div>
+                {
+                <ul className="errors">
+                    {validationErrors.map(error => (
+                        <li key={error}>{error}</li>
+                    ))}
+                </ul>
+                }
+            </div>
                 <img />
                 <div className='logoContainer'>
                     <h2 className='logoName'>CoolDigs</h2>
