@@ -21,6 +21,8 @@ const SpotsForm = () => {
     const [description, setDescription] = useState('');
     const [image, setImage] = useState('');
     const [validationErrors, setValidationErrors] = useState([]);
+    const [showError, setShowError] = useState(false);
+
 
 
     useEffect(() => {
@@ -35,13 +37,13 @@ const SpotsForm = () => {
         if (city.length > 50) errors.push('City must be no greater than 50 characters.');
         if (!state.length) errors.push('Please provide a state');
         if (state.length > 50) errors.push('State must be no greater than 50 characters.');
-        if (!locationName.length) errors.push('Please provide a location name');
         if (title.length > 50) errors.push('Location name must be no greater than 50 characters.');
         if (!price) errors.push('Please provide a price');
         if (!validPrice.test(price) || price.length > 6) errors.push('Please provide a valid price');
         if (!description.length) errors.push('Please provide a description');
+        if (!locationName.length) errors.push('Please provide a location name');
         if (!image.length) errors.push('Please provide a URL for image');
-        if (!validImage.test(image)) errors.push('Please provide a valid image');
+        if (!validImage.test(image)) errors.push('Please provide a valid image URL');
 
         setValidationErrors(errors);
     }, [title, city, state, locationName, price, description, image])
@@ -49,7 +51,9 @@ const SpotsForm = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault();
+        setShowError(true);
 
+        
         const spotForm = {
             title,
             city,
@@ -62,6 +66,7 @@ const SpotsForm = () => {
         };
 
 
+
         let newSpot = await dispatch(createSpot(spotForm));
         if (newSpot) {
             history.push(`/spots/${newSpot?.id}`);
@@ -72,12 +77,13 @@ const SpotsForm = () => {
         <div className='spotsFormPageContainer'>
             <div className='spotsFormContainer'>
             <div>
-                {
+                {showError && (
                 <ul className="errors">
                     {validationErrors.map(error => (
                         <li key={error}>{error}</li>
                     ))}
                 </ul>
+                )
                 }
             </div>
                 <img />
@@ -151,7 +157,10 @@ const SpotsForm = () => {
                         />
                     </div>
                     <div>
-                        <button type='submit' className='postBtn'>Post New Spot</button>
+                        <button type='submit'
+                            className='postBtn'
+                            // disabled={validationErrors.length > 0}
+                        >Post New Spot</button>
                     </div>
                 </form>
             </div>

@@ -93,10 +93,16 @@ const spotsReducer = (state = {}, action) => {
                 getAllPost[spots.id] = spots;
             });
             return { ...getAllPost, ...state };
-        case ADD_POST:
-            return { ...state, [action.payload.id]: action.payload };
-        case UPDATE_POST:
-            return { ...state, [action.payload.id]: action.payload };
+        case ADD_POST: {
+            const newState = { ...state }
+            newState[action.payload.id] = action.payload
+            return newState;
+        }
+        case UPDATE_POST: {
+            const newState = { ...state }
+            newState[action.payload.id] = action.payload
+            return newState;
+        }
         case DELETE_POST:
             const newState = { ...state }
             delete newState[action.payload.id]
