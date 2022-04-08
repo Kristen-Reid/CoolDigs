@@ -21,18 +21,18 @@
 .spotsBox{
     display: flex;
     flex-direction: column;
-    border: 2px solid black;
     margin: 20px;
     border-radius: 16px;
     background-color: white;
 
 }
-
+.spotsBox:hover {
+    cursor: pointer;
+}
 
 .imageBox{
     width: 380px;
     border-radius: 14px 14px 0 0;
-    background-color: yellowgreen;
 }
 
 .spotsInfoContainer{
@@ -47,5 +47,5 @@
 .spotsImage{
     width: 380px;
     height: 190px;
-    border-radius: 16px 16px 0 0;
+    border-radius: 15px 15px 0 0;
 }

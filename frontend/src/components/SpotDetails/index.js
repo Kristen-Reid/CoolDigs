@@ -15,18 +15,17 @@ const SpotDetail = () => {
     return (
         <div className='spotPageContainer'>
             <div className='imageContainer'>
-                <img className='spotImg' src='https://www.planetware.com/wpimages/2021/04/camping-for-beginners-complete-guide-how-to-camp-tips-light-up-the-night.jpg'/>
+                <div>
+                    {spot?.Images?.map(image => (
+                        <img className='spotImg' key={image?.id} src={image?.image} alt={spot?.name}/>
+                    ))}
+                </div>
             </div>
             <div className='spotPageInfo'>
                 <h2>{spot?.title}</h2>
                 <p>{`$${spot?.price}`}</p>
                 <p>{`${spot?.city}, ${spot?.state}`}</p>
                 <p>{`${spot?.description}`}</p>
-                <div>
-                    {spot?.Images?.map(image => (
-                        <img key={image?.id} src={image?.image} alt={spot?.name}/>
-                    ))}
-                </div>
                 </div>
                 {user?.id === spot?.userId && (
                 <div className='spotsBtnContainer'>
