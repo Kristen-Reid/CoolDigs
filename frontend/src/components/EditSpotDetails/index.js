@@ -7,11 +7,12 @@ import '../EditSpotDetails/EditSpot.css';
 
 
 const EditSpotDetails = () => {
+
     const dispatch = useDispatch();
     const history = useHistory();
     const { id } = useParams();
     const user = useSelector(state => state.session.user);
-    const spot = useSelector(state => state.spots[id]);
+    const spots = useSelector(state => state.spots);
 
 
     const [title, setTitle] = useState('');
@@ -25,27 +26,43 @@ const EditSpotDetails = () => {
     const [showError, setShowError] = useState(false);
 
     useEffect(() => {
+
+        setTitle(spots[id]?.title)
+        setCity(spots[id]?.city)
+        setState(spots[id]?.state)
+        setLocationName(spots[id]?.locationName)
+        setPrice(spots[id]?.price)
+        setDescription(spots[id]?.description)
+        // setImage(spots[id]?.image)
+    }, [spots])
+
+    console.log(spots[id])
+
+
+    useEffect(() => {
          const errors = [];
 
         const validImage = /\.(jpg|jpeg|png|gif)$/
         const validPrice = /^[^a-zA-Z][0-9]*\.?[0-9]*$/
 
-        if (!title.length) errors.push('Please provide a title');
-        if (title.length > 100) errors.push('Title must be no greater than 100 characters.');
-        if (!city.length) errors.push('Please provide a city');
-        if (city.length > 50) errors.push('City must be no greater than 50 characters.');
-        if (!state.length) errors.push('Please provide a state');
-        if (state.length > 50) errors.push('State must be no greater than 50 characters.');
-        if (locationName.length > 50) errors.push('Location name must be no greater than 50 characters.');
-        if (!price) errors.push('Please provide a price');
-        if (!validPrice.test(price) || price.length > 6) errors.push('Please provide a valid price');
-        if (!description.length) errors.push('Please provide a description');
-        if (!locationName.length) errors.push('Please provide a location name');
-        if (!image.length) errors.push('Please provide a URL for image');
-        if (!validImage.test(image)) errors.push('Please provide a valid image URL');
+        if (!title?.length) errors.push('Please provide a title');
+        if (title?.length > 100) errors.push('Title must be no greater than 100 characters.');
+        if (!city?.length) errors.push('Please provide a city');
+        if (city?.length > 50) errors.push('City must be no greater than 50 characters.');
+        if (!state?.length) errors.push('Please provide a state');
+        if (state?.length > 50) errors.push('State must be no greater than 50 characters.');
+        if (locationName?.length > 50) errors.push('Location name must be no greater than 50 characters.');
+        if (!price?.length) errors.push('Please provide a price');
+        if (!validPrice?.test(price) || price.length > 6) errors.push('Please provide a valid price');
+        if (!description?.length) errors.push('Please provide a description');
+        if (!locationName?.length) errors.push('Please provide a location name');
+        if (!image?.length) errors.push('Please provide a URL for image');
+        if (!validImage?.test(image)) errors.push('Please provide a valid image URL');
 
         setValidationErrors(errors);
     }, [title, city, state, locationName, price, description, image])
+
+
 
     const onSubmit = async (e) => {
         e.preventDefault();
@@ -63,11 +80,13 @@ const EditSpotDetails = () => {
             userId: user.id
         };
 
-
-        let update = await dispatch(updateSpot(spotForm));
-        if (update) {
-            history.push(`/spots/${update?.id}`);
+        if (validationErrors.length === 0) {
+            let update = await dispatch(updateSpot(spotForm));
+            if (update) {
+                history.push(`/spots/${update?.id}`);
+            }
         }
+
     }
 
     return (

@@ -31,8 +31,8 @@ const SpotsForm = () => {
         const validImage = /\.(jpg|jpeg|png|gif)$/
         const validPrice = /^[^a-zA-Z][0-9]*\.?[0-9]*$/
 
-        if (!title.length) errors.push('Please provide a title');
-        if (title.length > 100) errors.push('Title must be no greater than 100 characters.');
+        if (title === '') errors.push('Please provide a title');
+        if (title.length < 3 || title.length > 100) errors.push('Title must be no greater than 100 characters.');
         if (!city.length) errors.push('Please provide a city');
         if (city.length > 50) errors.push('City must be no greater than 50 characters.');
         if (!state.length) errors.push('Please provide a state');
@@ -53,7 +53,7 @@ const SpotsForm = () => {
         e.preventDefault();
         setShowError(true);
 
-        
+
         const spotForm = {
             title,
             city,
@@ -66,11 +66,13 @@ const SpotsForm = () => {
         };
 
 
-
-        let newSpot = await dispatch(createSpot(spotForm));
-        if (newSpot) {
-            history.push(`/spots/${newSpot?.id}`);
+        if (validationErrors.length === 0) {
+            let newSpot = await dispatch(createSpot(spotForm));
+            if (newSpot) {
+                history.push(`/spots/${newSpot?.id}`);
+            }
         }
+
     }
 
     return (

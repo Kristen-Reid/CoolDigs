@@ -47,7 +47,6 @@ router.put('/:id/edit', requireAuth, asyncHandler(async (req, res) => {
         ]
     });
 
-
     const { title, city, state, locationName, price, description, image } = req.body;
 
     if (spot) {
@@ -59,7 +58,6 @@ router.put('/:id/edit', requireAuth, asyncHandler(async (req, res) => {
                 spot.description = description,
                 spot.image = image
     }
-
     await spot.save();
 
     // put to image table
@@ -75,7 +73,17 @@ router.put('/:id/edit', requireAuth, asyncHandler(async (req, res) => {
 
     await imageDBLog.save();
 
-    return res.json(spot);
+    const oneSpot = await Spot.findByPk(spot.id, {
+        include: [
+            {
+                model: Image
+            }
+        ]
+    })
+
+    return res.json(oneSpot);
+
+    
 }));
 
 
