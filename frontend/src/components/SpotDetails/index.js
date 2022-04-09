@@ -1,12 +1,13 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { deleteSpot } from '../../store/spots';
 import '../SpotDetails/SpotDetails.css'
 
 const SpotDetail = () => {
 
     const dispatch = useDispatch();
+    const history = useHistory();
     const { id } = useParams();
 
     const user = useSelector(state => state.session.user);
@@ -29,8 +30,8 @@ const SpotDetail = () => {
                 </div>
                 {user?.id === spot?.userId && (
                 <div className='spotsBtnContainer'>
-                    <button className='spotsEditBtn'><a className='spotsBtnTxt' href={`/spots/${spot?.id}/edit`}>Edit Spot</a></button>
-                    <button className='spotsDeleteBtn' onClick={() => dispatch(deleteSpot(id)) }><a className='spotsBtnTxt' href={`/spots/`}>Delete Spot</a></button>
+                    <a className='spotsEditBtn spotsBtnTxt' href={`/spots/${spot?.id}/edit`}>Edit Spot</a>
+                    <a className='spotsDeleteBtn spotsBtnTxt' href={`/spots/`} onClick={() => dispatch(deleteSpot(id)) }>Delete Spot</a>
                 </div>
                 )}
         </div>
