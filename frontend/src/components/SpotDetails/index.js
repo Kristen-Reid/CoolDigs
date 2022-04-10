@@ -13,6 +13,7 @@ const SpotDetail = () => {
     const user = useSelector(state => state.session.user);
     const spot = useSelector(state => state.spots[id]);
 
+
     return (
         <div className='spotPageContainer'>
             <div className='imageContainer'>
@@ -34,6 +35,15 @@ const SpotDetail = () => {
                     <a className='spotsDeleteBtn spotsBtnTxt' href={`/spots/`} onClick={() => dispatch(deleteSpot(id)) }>Delete Spot</a>
                 </div>
                 )}
+            <div className='reviewContainer'>
+                {spot?.Reviews?.map(review => (
+                    <div key={review?.id} className='reviewCard'>
+                        <p>{review?.title}</p>
+                        <p>{review?.User?.username}</p>
+                        <p>{review?.content}</p>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
