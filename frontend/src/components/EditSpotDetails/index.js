@@ -36,7 +36,7 @@ const EditSpotDetails = () => {
         setImage(spots[id]?.Images[0]?.image)
     }, [spots])
 
-    
+
 
 
     useEffect(() => {
@@ -46,7 +46,7 @@ const EditSpotDetails = () => {
         const validPrice = /^[^a-zA-Z][0-9]*\.?[0-9]*$/
 
         if (!title?.length) errors.push('Please provide a title');
-        if (title?.length < 5 || title?.length > 100) errors.push('Title must be no between 5 and 100 characters.');
+        if (title?.length < 5 || title?.length > 50) errors.push('Title must be no between 5 and 50 characters.');
         if (!city?.length) errors.push('Please provide a city');
         if (city?.length < 5 || city?.length > 50) errors.push('City must be no between 5 50 characters.');
         if (!state?.length) errors.push('Please provide a state');
@@ -93,7 +93,6 @@ const EditSpotDetails = () => {
         <div className='spotsFormPageContainer'>
             <div className='spotsFormContainer'>
                 <div>
-                    {/* Temp fix */}
                 {showError && (
                 <ul className="errors">
                     {validationErrors.map(error => (
@@ -103,7 +102,6 @@ const EditSpotDetails = () => {
                 )
                 }
             </div>
-                <img />
                 <div className='logoContainer'>
                     <h2 className='logoName'>CoolDigs</h2>
                     {<Logo/> }
@@ -176,7 +174,6 @@ const EditSpotDetails = () => {
                         <button
                             type='submit'
                             className='postBtn'
-                            // disabled={validationErrors.length > 0}
                         >Post New Spot</button>
                     </div>
                 </form>

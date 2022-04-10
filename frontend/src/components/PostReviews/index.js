@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { createReview } from '../../store/reviews';
 import { getASpot } from '../../store/spots';
 import '../PostReviews/PostReviews.css';
@@ -18,9 +18,8 @@ const PostReviews = ({ spot }) => {
 
     useEffect(() => {
         dispatch(getASpot(spot?.id))
-    }, [hasSubmitted])
+    }, [hasSubmitted]);
 
-    console.log(spot)
 
     const onSubmit = async (e) => {
         e.preventDefault();
@@ -33,9 +32,8 @@ const PostReviews = ({ spot }) => {
             spotId: spot.id
         }
 
-        // console.log(reviewForm)
 
-        let create = await dispatch(createReview(reviewForm))
+        let create = await dispatch(createReview(reviewForm));
         if (create) {
             history.push(`/spots/${spot?.id}`)
         }

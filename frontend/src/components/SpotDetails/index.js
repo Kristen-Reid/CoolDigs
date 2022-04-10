@@ -2,13 +2,14 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, useHistory } from 'react-router-dom';
 import { deleteSpot } from '../../store/spots';
+import EditReviewsForm from '../EditReviews/EditReviewsForm';
 import PostReviews from '../PostReviews';
+import EditReviewsModal from '../EditReviews';
 import '../SpotDetails/SpotDetails.css'
 
 const SpotDetail = () => {
 
     const dispatch = useDispatch();
-    const history = useHistory();
     const { id } = useParams();
 
     const user = useSelector(state => state.session.user);
@@ -45,6 +46,9 @@ const SpotDetail = () => {
                         <p>{review?.title}</p>
                         <p>{review?.User?.username}</p>
                         <p>{review?.content}</p>
+                        <div className='editModalBtn'>
+                            <EditReviewsModal review={review}/>
+                        </div>
                     </div>
                 ))}
             </div>
