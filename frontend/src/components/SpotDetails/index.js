@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, useHistory } from 'react-router-dom';
-import { deleteSpot } from '../../store/spots';
-import EditReviewsForm from '../EditReviews/EditReviewsForm';
+import { deleteSpot, getASpot } from '../../store/spots';
+import { deleteReview } from '../../store/reviews';
 import PostReviews from '../PostReviews';
 import EditReviewsModal from '../EditReviews';
 import '../SpotDetails/SpotDetails.css'
+import has from 'prop-types/lib/has';
 
 const SpotDetail = () => {
 
     const dispatch = useDispatch();
     const { id } = useParams();
+    const [hasDeleted, setHasDeleted] = useState(false);
+
+    useEffect(() => {
+        dispatch(getASpot(id))
+    }, [hasDeleted])
 
     const user = useSelector(state => state.session.user);
     const spot = useSelector(state => state.spots[id]);
@@ -47,7 +53,8 @@ const SpotDetail = () => {
                         <p>{review?.User?.username}</p>
                         <p>{review?.content}</p>
                         <div className='editModalBtn'>
-                            <EditReviewsModal review={review}/>
+                            <EditReviewsModal review={review} />
+                            <a className='rvwDeleteBtn rvwBtnTxt' onClick={async () => { await dispatch(deleteReview(review?.id)); setHasDeleted(!hasDeleted) }}>Delete Review</a>
                         </div>
                     </div>
                 ))}

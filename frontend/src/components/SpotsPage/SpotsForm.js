@@ -162,7 +162,6 @@ const SpotsForm = () => {
                         <button
                             type='submit'
                             className='postBtn'
-                            // disabled={validationErrors.length > 0}
                         >Post New Spot</button>
                     </div>
                 </form>

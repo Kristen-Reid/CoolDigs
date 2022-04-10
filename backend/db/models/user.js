@@ -93,6 +93,11 @@ module.exports = (sequelize, DataTypes) => {
       hooks: true,
       onDelete: 'cascade'
     });
+    User.hasMany(models.Review, {
+      foreignKey: 'userId',
+      hooks: true,
+      onDelete: 'cascade'
+    });
   }
 
   return User;

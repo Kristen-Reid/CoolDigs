@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { createReview } from '../../store/reviews';
 import { getASpot } from '../../store/spots';
 import '../PostReviews/PostReviews.css';
@@ -8,6 +8,7 @@ import '../PostReviews/PostReviews.css';
 const PostReviews = ({ spot }) => {
     const dispatch = useDispatch();
     const history = useHistory();
+    const { id } = useParams();
     const user = useSelector(state => state.session.user);
 
     const [title, setTitle] = useState('');
@@ -16,8 +17,9 @@ const PostReviews = ({ spot }) => {
     const [hasSubmitted, setHasSubmitted] = useState(false);
     const [showError, setShowError] = useState(false);
 
+
     useEffect(() => {
-        dispatch(getASpot(spot?.id))
+        dispatch(getASpot(id))
     }, [hasSubmitted]);
 
 

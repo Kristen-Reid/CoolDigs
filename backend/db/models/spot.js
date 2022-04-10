@@ -17,6 +17,11 @@ module.exports = (sequelize, DataTypes) => {
       hooks: true,
       onDelete: 'cascade'
     });
+    Spot.hasMany(models.Review, {
+      foreignKey: 'spotId',
+      hooks: true,
+      onDelete: 'cascade'
+    })
   }
 
   return Spot;
