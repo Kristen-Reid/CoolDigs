@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, useHistory } from 'react-router-dom';
 import { deleteSpot } from '../../store/spots';
+import PostReviews from '../PostReviews';
 import '../SpotDetails/SpotDetails.css'
 
 const SpotDetail = () => {
@@ -35,6 +36,9 @@ const SpotDetail = () => {
                     <a className='spotsDeleteBtn spotsBtnTxt' href={`/spots/`} onClick={() => dispatch(deleteSpot(id)) }>Delete Spot</a>
                 </div>
                 )}
+
+            <PostReviews spot={spot} />
+
             <div className='reviewContainer'>
                 {spot?.Reviews?.map(review => (
                     <div key={review?.id} className='reviewCard'>

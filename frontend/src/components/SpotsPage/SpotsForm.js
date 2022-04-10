@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { createSpot } from '../../store/spots';
 import { useHistory } from 'react-router-dom';
+import { createSpot } from '../../store/spots';
 import { ReactComponent as Logo } from '../../svgImg/logo-white.svg';
 import '../SpotsPage/SpotsForm.css'
 
@@ -159,7 +159,8 @@ const SpotsForm = () => {
                         />
                     </div>
                     <div>
-                        <button type='submit'
+                        <button
+                            type='submit'
                             className='postBtn'
                             // disabled={validationErrors.length > 0}
                         >Post New Spot</button>

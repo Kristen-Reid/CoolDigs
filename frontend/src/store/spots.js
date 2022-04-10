@@ -1,6 +1,7 @@
 import { csrfFetch } from "./csrf";
 
 const LOAD = 'spots/LOAD';
+const LOAD_ONE = 'spots/LOAD_ONE';
 const ADD_POST = 'spots/ADD_POST';
 const UPDATE_POST = 'spots/UPDATE_POST';
 const DELETE_POST = 'spots/DELETE_POST';
@@ -9,6 +10,13 @@ const loadSpots = (spots) => {
     return {
         type: LOAD,
         payload: spots
+    }
+}
+
+const getSpot = (spot) => {
+    return {
+        type: LOAD_ONE,
+        payload: spot
     }
 }
 
@@ -41,6 +49,16 @@ export const getSpots = () => async (dispatch) => {
         const spots = await response.json();
         dispatch(loadSpots(spots));
         return response;
+    }
+}
+
+export const getASpot = (id) => async (dispatch) => {
+    const response = await csrfFetch(`/api/spots/${id}`);
+
+    if (response.ok) {
+        const spot = await response.json();
+        dispatch(getSpot(spot));
+        // return response;
     }
 }
 
@@ -93,6 +111,8 @@ const spotsReducer = (state = {}, action) => {
                 getAllPost[spots.id] = spots;
             });
             return { ...getAllPost, ...state };
+        case LOAD_ONE:
+            return {...state, [action.payload.id]: action.payload}
         case ADD_POST: {
             const newState = { ...state }
             newState[action.payload.id] = action.payload
@@ -103,10 +123,11 @@ const spotsReducer = (state = {}, action) => {
             newState[action.payload.id] = action.payload
             return newState;
         }
-        case DELETE_POST:
+        case DELETE_POST: {
             const newState = { ...state }
             delete newState[action.payload.id]
             return newState;
+        }
         default:
             return state;
     }

@@ -22,7 +22,7 @@ const SpotsPage = () => {
                         state={spot.state}
                         price={spot.price}
                     />
-                         ))}
+                ))}
             </div>
         </div>
     )
