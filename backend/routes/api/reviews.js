@@ -16,7 +16,7 @@ router.post('/new', requireAuth, asyncHandler(async (req, res) => {
 
 
 
-router.put('/:id/edit', requireAuth, asyncHandler(async (req, res) => {
+router.put('/:id(\\d+)/edit', requireAuth, asyncHandler(async (req, res) => {
     const reviewId = parseInt(req.params.id, 10);
     const review = await Review.findByPk(reviewId, {
         include: [
@@ -42,7 +42,7 @@ router.put('/:id/edit', requireAuth, asyncHandler(async (req, res) => {
 
 }));
 
-router.delete('/:id/delete', requireAuth, asyncHandler(async (req, res) => {
+router.delete('/:id(\\d+)/delete', requireAuth, asyncHandler(async (req, res) => {
     const reviewId = parseInt(req.params.id, 10);
     const review = await Review.findByPk(reviewId);
     console.log(review)

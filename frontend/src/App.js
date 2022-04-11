@@ -36,14 +36,19 @@ const App = () => {
           <Route>
             <HomePage />
           </Route> }
-        <Route path='/spots/new'>
+        <Route exact path='/spots/new'>
           <SpotsForm />
         </Route>
         <Route exact path='/spots/:id'>
           <SpotDetail />
         </Route>
-        <Route path='/spots/:id/edit'>
+        <Route exact path='/spots/:id/edit'>
           <EditSpotDetails />
+        </Route>
+        <Route>
+          <div className='pageNotFoundContainer'>
+            <h1 className='pageNotFound'>PAGE NOT FOUND</h1>
+          </div>
         </Route>
       </Switch>
     </>

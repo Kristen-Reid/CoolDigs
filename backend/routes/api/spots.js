@@ -27,7 +27,7 @@ router.get('/', asyncHandler(async (req, res) => {
 }));
 
 
-router.get('/:id', requireAuth, asyncHandler(async (req, res) => {
+router.get('/:id(\\d+)', requireAuth, asyncHandler(async (req, res) => {
     const spotId = parseInt(req.params.id, 10)
     const spot = await Spot.findByPk(spotId, {
         include: [
@@ -70,7 +70,7 @@ router.post('/new', requireAuth, asyncHandler(async (req, res) => {
 }));
 
 
-router.put('/:id/edit', requireAuth, asyncHandler(async (req, res) => {
+router.put('/:id(\\d+)/edit', requireAuth, asyncHandler(async (req, res) => {
     const spotId = parseInt(req.params.id, 10);
     const spot = await Spot.findByPk(spotId, {
         include: [
@@ -95,7 +95,7 @@ router.put('/:id/edit', requireAuth, asyncHandler(async (req, res) => {
 
     await spot.save();
 
-    
+
     const imageDBLog = await Image.findOne({
         where: {
             spotId
@@ -122,7 +122,7 @@ router.put('/:id/edit', requireAuth, asyncHandler(async (req, res) => {
 }));
 
 
-router.delete('/:id/delete', requireAuth, asyncHandler(async (req, res) => {
+router.delete('/:id(\\d+)/delete', requireAuth, asyncHandler(async (req, res) => {
     const spotId = parseInt(req.params.id, 10);
     const spot = await Spot.findByPk(spotId);
 

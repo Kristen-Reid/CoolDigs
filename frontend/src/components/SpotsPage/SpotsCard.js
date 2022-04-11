@@ -18,7 +18,7 @@ const SpotsCard = ({id, title, locationName, city, state, price, image}) => {
                         <p>{`${locationName} -- ${city}, ${state}`}</p>
                     </div>
                     <div className='spotsPrice'>
-                        <p>{`$${price}`}</p>
+                        <p>{`$${price}/ night`}</p>
                     </div>
                 </div>
         </div>

@@ -22,7 +22,17 @@ module.exports = {
       {
         email: 'email@example.com',
         username: 'boobookitty',
+        hashedPassword: bcrypt.hashSync('password4')
+      },
+      {
+        email: 'email2@example.com',
+        username: 'krisr44',
         hashedPassword: bcrypt.hashSync('password5')
+      },
+      {
+        email: 'email3@example.com',
+        username: 'garyk815',
+        hashedPassword: bcrypt.hashSync('password6')
       }
     ], {});
   },

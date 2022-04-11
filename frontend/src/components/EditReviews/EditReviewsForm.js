@@ -6,8 +6,6 @@ import '../EditReviews/EditReviews.css';
 const EditReviewsForm = ({review, setShowModal}) => {
     const dispatch = useDispatch();
 
-
-
     const [title, setTitle] = useState(review?.title);
     const [content, setContent] = useState(review?.content);
     const [validationErrors, setValidationErrors] = useState([]);
@@ -16,13 +14,11 @@ const EditReviewsForm = ({review, setShowModal}) => {
     useEffect(() => {
         const errors = [];
 
-        if (!title?.length) errors.push('Please provide a title');
-        if (title?.length < 5 || title?.length > 50) errors.push('Title must be no between 5 and 50 characters.');
         if (!content?.length) errors.push('Please provide review content.');
         if (content?.length < 5) errors.push('Content must 5 characters or more.');
 
         setValidationErrors(errors);
-    }, [title, content]);
+    }, [content]);
 
 
     const onSubmit = async (e) => {
@@ -54,11 +50,11 @@ const EditReviewsForm = ({review, setShowModal}) => {
                 }
             </div>
             <form onSubmit={onSubmit}>
-                <div className=''>
+                <div>
                     <input
                         className='editTitleInput'
                         type='text'
-                        placeholder='Review Title'
+                        placeholder='Review Title (optional)'
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                     />
@@ -76,7 +72,7 @@ const EditReviewsForm = ({review, setShowModal}) => {
                     <button
                         type='submit'
                         className='editRvwBtn'
-                    >Post Review</button>
+                    >Edit Review</button>
                 </div>
             </form>
         </div>

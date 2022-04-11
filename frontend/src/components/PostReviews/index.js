@@ -20,13 +20,11 @@ const PostReviews = ({ spot }) => {
     useEffect(() => {
         const errors = [];
 
-        if (!title?.length) errors.push('Please provide a title');
-        if (title?.length < 5 || title?.length > 50) errors.push('Title must be no between 5 and 50 characters.');
         if (!content?.length) errors.push('Please provide review content.');
         if (content?.length < 5) errors.push('Content must 5 characters or more.');
 
         setValidationErrors(errors);
-    }, [title, content]);
+    }, [content]);
 
     useEffect(() => {
         dispatch(getASpot(id))
@@ -41,20 +39,22 @@ const PostReviews = ({ spot }) => {
         const reviewForm = {
             title,
             content,
-            userId: user.id,
-            spotId: spot.id
+            userId: user?.id,
+            spotId: spot?.id
         }
 
 
         if (validationErrors.length === 0) {
             let create = await dispatch(createReview(reviewForm));
+            setContent('');
+            setHasSubmitted(false);
+            setValidationErrors([]);
             if (create) {
                 history.push(`/spots/${spot?.id}`)
             }
         }
 
-        setTitle('');
-        setContent('');
+        // setTitle('');
         setHasSubmitted(false);
     }
 
@@ -75,7 +75,7 @@ const PostReviews = ({ spot }) => {
                     <input
                         className='reviewTitleInput'
                         type='text'
-                        placeholder='Add Review Title'
+                        placeholder='Add Review Title (optional)'
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                     />

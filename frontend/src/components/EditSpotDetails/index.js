@@ -49,7 +49,7 @@ const EditSpotDetails = () => {
         if (!city?.length) errors.push('Please provide a city');
         if (city?.length < 5 || city?.length > 50) errors.push('City must be no between 5 50 characters.');
         if (!state?.length) errors.push('Please provide a state');
-        if (state?.length < 5 || state?.length > 50) errors.push('State must be no between 5 50 characters.');
+        if (state?.length < 2) errors.push('Please provide valid state');
         if (locationName?.length > 50) errors.push('Location name must be no greater than 50 characters.');
         if (!price?.length) errors.push('Please provide a price');
         if (!validPrice?.test(price) || price?.length > 6) errors.push('Please provide a valid price');
