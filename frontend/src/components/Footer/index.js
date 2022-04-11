@@ -19,10 +19,6 @@ const Footer = () => {
                             <LinkedIn/>
                         </a>
                 </div>
-                <div className='githubContainer'>
-                </div>
-                <div className='linkedinContainer'>
-                </div>
             <div className='tech'>
                 <Node className='node'/>
                 <Express className='express'/>

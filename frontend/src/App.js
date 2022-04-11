@@ -52,7 +52,9 @@ const App = () => {
           </div>
         </Route>
       </Switch>
-      <Footer/>
+      <div className='footerApp'>
+        <Footer/>
+      </div>
     </>
   );
 }
