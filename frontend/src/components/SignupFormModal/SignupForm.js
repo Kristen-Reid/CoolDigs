@@ -34,9 +34,11 @@ const SignupForm = () => {
                     <h2 className='logoName'>CoolDigs</h2>
                     {<Logo/> }
                 </div>
-                <ul>
-                    {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-                </ul>
+                <div className='errorContainer'>
+                    <ul className='errors2'>
+                        {errors.map((error, idx) => <li key={idx}>{error}</li>)}
+                    </ul>
+                </div>
                 <div>
                     <label>
                         <input

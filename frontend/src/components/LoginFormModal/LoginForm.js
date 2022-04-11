@@ -9,7 +9,7 @@ const LoginForm = () => {
     const [credential, setCredential] = useState('');
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState([]);
-    
+
 
 
     const handleSubmit = async (e) => {
@@ -29,14 +29,16 @@ const LoginForm = () => {
 
     return (
         <div className='loginContainer'>
+            <div className='errorContainer'>
+                <ul className='errorsLogin'>
+                    {errors.map((error, idx) => <li key={idx}>{error}</li>)}
+                </ul>
+            </div>
             <div className='logoContainer'>
                 <h2 className='logoName'>CoolDigs</h2>
                 {<Logo/> }
             </div>
             <form onSubmit={handleSubmit}>
-                <ul>
-                    {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-                </ul>
                 <div className='credInput input'>
                     <label>
                         <input

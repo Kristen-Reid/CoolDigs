@@ -56,3 +56,9 @@
     border: none;
     box-shadow: white 0px 0 10px;
 }
+
+.errors {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

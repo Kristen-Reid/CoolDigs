@@ -78,9 +78,9 @@ const SpotsForm = () => {
     return (
         <div className='spotsFormPageContainer'>
             <div className='spotsFormContainer'>
-            <div>
+            <div className='errorsContainer'>
                 {showError && (
-                <ul className="errors">
+                <ul className='errors'>
                     {validationErrors.map(error => (
                         <li key={error}>{error}</li>
                     ))}

@@ -8,6 +8,7 @@ import SpotsForm from './components/SpotsPage/SpotsForm';
 import SpotsPage from './components/SpotsPage';
 import SpotDetail from './components/SpotDetails';
 import EditSpotDetails from './components/EditSpotDetails';
+import Footer from './components/Footer';
 import { getSpots } from './store/spots';
 
 
@@ -51,6 +52,7 @@ const App = () => {
           </div>
         </Route>
       </Switch>
+      <Footer/>
     </>
   );
 }
