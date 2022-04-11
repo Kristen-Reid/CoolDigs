@@ -14,7 +14,6 @@
 .spotImg {
     width: 700px;
     height: 500px;
-    /* border: 5px solid black; */
     border-radius: 10px 10px 0 0;
 }
 
@@ -31,7 +30,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: blue; */
     font-family: 'Vazirmatn';
 }
 
@@ -77,10 +75,54 @@
 .reviewContainer {
     display: flex;
     flex-direction: column;
-    /* background-color: white; */
 }
 
 .reviewCard {
     background-color: white;
     margin: 10px;
+    width: 500px;
+    padding: 30px;
+    border-radius: 16px;
+    font-family: 'Vazirmatn';
+    box-shadow: white 0px 0 15px;
+}
+
+.rvwTitle {
+    font-size: 26px;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+.rvwUserName {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.editRvwLink:hover {
+    cursor: pointer;
+    color: blue;
+    border-bottom: 5px blue solid;
+}
+
+.rvwEditBtn {
+    padding-bottom: 10px;
+}
+
+.rvwDeleteBtn {
+    padding-bottom: 10px;
+}
+
+.rvwBtnTxt:hover {
+    cursor: pointer;
+    color: red;
+    border-bottom: 5px red solid;
+}
+
+.spotPrice {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.spotStateAndCity {
+    font-size: 20px;
 }

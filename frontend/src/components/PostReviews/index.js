@@ -48,20 +48,20 @@ const PostReviews = ({ spot }) => {
     return (
         <div className='postReviewContainer'>
             <form onSubmit={onSubmit}>
-                <div>
+                <div className='reviewContent'>
                     <input
-                        className='reviewInput'
+                        className='reviewTitleInput'
                         type='text'
-                        placeholder='Review Title'
+                        placeholder='Add Review Title'
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                     />
                 </div>
-                <div>
-                    <input
-                        className='reviewInput'
+                <div className='reviewContent'>
+                    <textarea
+                        className='reviewContentInput'
                         type='text'
-                        placeholder='Review Content'
+                        placeholder='Add Review Content'
                         value={content}
                         onChange={(e) => setContent(e.target.value)}
                     />

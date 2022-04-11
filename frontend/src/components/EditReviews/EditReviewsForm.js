@@ -43,8 +43,8 @@ const EditReviewsForm = ({review, setShowModal}) => {
     }
 
     return (
-        <div className='EditReviewContainer'>
-            <div>
+        <div className='editReviewContainer'>
+            <div className='errors'>
                 {showError && (
                 <ul className="errors">
                     {validationErrors.map(error => (
@@ -55,9 +55,9 @@ const EditReviewsForm = ({review, setShowModal}) => {
                 }
             </div>
             <form onSubmit={onSubmit}>
-                <div>
+                <div className=''>
                     <input
-                        className='editReviewInput'
+                        className='editTitleInput'
                         type='text'
                         placeholder='Review Title'
                         value={title}
@@ -65,15 +65,15 @@ const EditReviewsForm = ({review, setShowModal}) => {
                     />
                 </div>
                 <div>
-                    <input
-                        className='editReviewInput'
+                    <textarea
+                        className='editContentInput'
                         type='text'
                         placeholder='Review Content'
                         value={content}
                         onChange={(e) => setContent(e.target.value)}
                     />
                 </div>
-                <div>
+                <div className='editRvwBtnContainer'>
                     <button
                         type='submit'
                         className='editRvwBtn'

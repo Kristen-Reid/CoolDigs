@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Vazirmatn:100,200,300,regular,500,600,700,800,900);
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 .spotsPageContainer {
     display: flex;
@@ -9,7 +10,8 @@
 
 .spotsPageTitle {
     font-size: 50px;
-    font-family: 'Vazirmatn';
+    font-family: 'Fredoka One';
+    letter-spacing: 3px;
 }
 
 .spotsContainer {
@@ -24,8 +26,8 @@
     margin: 20px;
     border-radius: 16px;
     background-color: white;
-
 }
+
 .spotsBox:hover {
     cursor: pointer;
 }

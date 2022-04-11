@@ -33,8 +33,8 @@ const SpotDetail = () => {
             </div>
             <div className='spotPageInfo'>
                 <h2>{spot?.title}</h2>
-                <p>{`$${spot?.price}`}</p>
-                <p>{`${spot?.city}, ${spot?.state}`}</p>
+                <p className='spotPrice'>{`$${spot?.price}`}</p>
+                <p className='spotStateAndCity'>{`${spot?.city}, ${spot?.state}`}</p>
                 <p>{`${spot?.description}`}</p>
                 </div>
                 {user?.id === spot?.userId && (
@@ -49,13 +49,19 @@ const SpotDetail = () => {
             <div className='reviewContainer'>
                 {spot?.Reviews?.map(review => (
                     <div key={review?.id} className='reviewCard'>
-                        <p>{review?.title}</p>
-                        <p>{review?.User?.username}</p>
-                        <p>{review?.content}</p>
-                        <div className='editModalBtn'>
-                            <EditReviewsModal review={review} />
-                            <a className='rvwDeleteBtn rvwBtnTxt' onClick={async () => { await dispatch(deleteReview(review?.id)); setHasDeleted(!hasDeleted) }}>Delete Review</a>
+                        <p className='rvwTitle'>{review?.title}</p>
+                        <p className='rvwUserName'>{review?.User?.username}</p>
+                        <p className='rvwContent'>{review?.content}</p>
+                        {user?.id === review?.userId && (
+                        <div className='editRvwBtnContainer'>
+                            <div className='rvwEditBtn'>
+                                <EditReviewsModal review={review} />
+                            </div>
+                            <div className='rvwDeleteBtn'>
+                                <a className='rvwBtnTxt' onClick={async () => { await dispatch(deleteReview(review?.id)); setHasDeleted(!hasDeleted) }}>Delete Review</a>
+                            </div>
                         </div>
+                        )}
                     </div>
                 ))}
             </div>

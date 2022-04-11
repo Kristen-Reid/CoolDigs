@@ -1,0 +1,76 @@
+.editReviewContainer{
+    background-color: black;
+    box-shadow: white 0px 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 250px;
+    margin: 75px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.editTitleInput {
+    padding: 10px;
+    margin: 0px 0px 10px 0px;
+    width: 250px;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Vazirmatn';
+    /* background-color: white; */
+}
+
+.editTitleInput:hover {
+    cursor: pointer;
+}
+
+.editTitleInput:focus {
+    cursor: text;
+}
+
+.editContentInput {
+    align-items: flex-start;
+    padding: 10px;
+    margin: 0px 0px 10px 0px;
+    width: 250px;
+    height: 75px;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Vazirmatn';
+}
+
+.editContentInput:hover {
+    cursor: pointer;
+    overflow-y: scroll;
+}
+
+.editContentInput:focus {
+    cursor: text;
+}
+
+.editContentInput::-webkit-scrollbar {
+    background-color: black;
+}
+
+.editContentInput::-webkit-scrollbar-thumb {
+    background-color: rgb(52, 47, 47);
+}
+
+.editRvwBtn {
+    padding: 10px;
+    width: 275px;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Vazirmatn';
+    color: white;
+    background-color: rgb(90, 81, 81);
+}
+
+.editRvwBtn:hover {
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 0 5px;
+}
