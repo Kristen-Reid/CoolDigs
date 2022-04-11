@@ -3,13 +3,16 @@
 This is a clone of HipCamp called CoolDigs. CoolDigs is a place where users can schedule to stay at different campsites all over and  to adventure in the great outdoors under the stars.
 
 ## Index 
-| [Database Schema] (https://github.com/Kristen-Reid/CoolDigs/wiki/Database-Schema) | [Features List] (https://github.com/Kristen-Reid/CoolDigs/wiki/Feature-List)
+| [Database Schema](https://github.com/Kristen-Reid/CoolDigs/wiki/Database-Schema) | [Features List](https://github.com/Kristen-Reid/CoolDigs/wiki/Feature-List)
 
 ## Technologies Used
-![image](https://user-images.githubusercontent.com/93681006/162755238-34836ccc-3a44-43e8-a143-7d23ba1524aa.png)
-![image](https://user-images.githubusercontent.com/93681006/162755321-f5617fb2-7f80-4483-9a59-3cedbee285bc.png)
-![image](https://user-images.githubusercontent.com/93681006/162755358-70c2cea8-935c-4fc8-b326-9dfcbef1d7e6.png)
-![image](https://user-images.githubusercontent.com/93681006/162755433-60f96701-e500-471f-a868-763e8743e12c.png)
+![image](https://user-images.githubusercontent.com/93681006/162760918-70da79a4-e697-4cbb-bddd-a16a29094eeb.png)
+![image](https://user-images.githubusercontent.com/93681006/162760984-a785d461-a8cc-48fc-bc48-c4b9e23b95e4.png)
+![image](https://user-images.githubusercontent.com/93681006/162761070-c289d0d2-33eb-4b88-88d3-3e87248af2dd.png)
+![image](https://user-images.githubusercontent.com/93681006/162761153-34709aed-558f-4485-91b3-31ee5c9c53e6.png)
+
+
+
 
 ## Getting start
 
