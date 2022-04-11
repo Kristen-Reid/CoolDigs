@@ -26,10 +26,14 @@
     margin: 20px;
     border-radius: 16px;
     background-color: white;
+    transition: 0.5s ease;
 }
 
 .spotsBox:hover {
     cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .06);
+    margin: 25px;
 }
 
 .imageBox{
