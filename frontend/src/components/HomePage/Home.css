@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Vazirmatn:100,200,300,regular,500,600,700,800,900);
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 .homeContainer {
     display: flex;
@@ -35,23 +36,27 @@
 .box1 {
     background-color:  rgb(8, 8, 83);
     margin: 15px 20px 15px 0;
+    transition: 0.5s ease;
 }
 
 .box1Img {
     width: 100%;
     height: 350px;
     border-radius: 16px 16px 0px 0px;
+    object-fit: cover;
 }
 
 .box2 {
     background-color: rgb(8, 8, 83);
     margin: 15px 0px 15px 20px;
+    transition: 0.5s ease;
 }
 
 .box2Img {
     width: 100%;
     height: 350px;
     border-radius: 16px 16px 0px 0px;
+    object-fit: cover;
 }
 
 .homePic2 {
@@ -67,4 +72,74 @@
     font-weight: bold;
     font-family: 'Vazirmatn';
     padding: 15px;
+}
+
+.homePageGreet {
+    color: white;
+    font-family: 'Fredoka One';
+    letter-spacing: 3px;
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+}
+
+.homePageGreet2 {
+    color: white;
+    font-family: 'Fredoka One';
+    letter-spacing: 3px;
+    font-size: 25px;
+    text-align: center;
+    margin: 0;
+}
+
+.homeGreetContainer {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.greet {
+    margin: 0;
+}
+
+.fakeBtn2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+    background-color: white;
+    width: 120px;
+    height: 40px;
+    margin-top: 30px;
+    margin-right: 15px;
+    border-radius: 20px;
+    text-align: center;
+    font-family: 'Vazirmatn';
+}
+
+.box2Content {
+    display: flex;
+}
+
+.fakeBtn1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+    background-color: white;
+    width: 160px;
+    height: 40px;
+    margin-top: 30px;
+    margin-right: 15px;
+    border-radius: 20px;
+    text-align: center;
+    font-family: 'Vazirmatn';
+}
+
+.box1Content {
+    display: flex;
 }

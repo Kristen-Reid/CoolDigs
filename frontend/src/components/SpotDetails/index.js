@@ -32,7 +32,7 @@ const SpotDetail = () => {
                 </div>
             </div>
             <div className='spotPageInfo'>
-                <h2>{spot?.title}</h2>
+                <h2 className='spotTitle'>{spot?.title}</h2>
                 <p className='spotPrice'>{`$${spot?.price}`}</p>
                 <p className='spotStateAndCity'>{`${spot?.city}, ${spot?.state}`}</p>
                 <p>{`${spot?.description}`}</p>
