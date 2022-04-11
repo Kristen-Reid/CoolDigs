@@ -10,6 +10,8 @@ This is a clone of HipCamp called CoolDigs. CoolDigs is a place where users can 
 ![image](https://user-images.githubusercontent.com/93681006/162760984-a785d461-a8cc-48fc-bc48-c4b9e23b95e4.png)
 ![image](https://user-images.githubusercontent.com/93681006/162761070-c289d0d2-33eb-4b88-88d3-3e87248af2dd.png)
 ![image](https://user-images.githubusercontent.com/93681006/162761153-34709aed-558f-4485-91b3-31ee5c9c53e6.png)
+![image](https://user-images.githubusercontent.com/93681006/162761327-428563af-91c8-4774-b02c-a9f4e0bb268e.png)
+
 
 
 
