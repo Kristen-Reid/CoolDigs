@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { deleteSpot, getASpot } from '../../store/spots';
 import { deleteReview } from '../../store/reviews';
 import PostReviews from '../PostReviews';
 import EditReviewsModal from '../EditReviews';
-import '../SpotDetails/SpotDetails.css'
-import has from 'prop-types/lib/has';
+import '../SpotDetails/SpotDetails.css';
+
 
 const SpotDetail = () => {
 

@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
-import { getASpot, getSpots } from '../../store/spots';
 import { updateReview } from '../../store/reviews';
 import '../EditReviews/EditReviews.css';
 
 const EditReviewsForm = ({review, setShowModal}) => {
     const dispatch = useDispatch();
-    const { id } = useParams();
+
 
 
     const [title, setTitle] = useState(review?.title);

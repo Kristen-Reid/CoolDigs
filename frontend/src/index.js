@@ -22,7 +22,7 @@ if (process.env.NODE_ENV !== 'production') {
 };
 
 
-function Root() {
+const Root = () => {
   return (
     <Provider store={store}>
       <ModalProvider>

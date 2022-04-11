@@ -11,7 +11,7 @@ import EditSpotDetails from './components/EditSpotDetails';
 import { getSpots } from './store/spots';
 
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
   const user = useSelector(state => state.session.user);
   const [isLoaded, setIsLoaded] = useState(false);
