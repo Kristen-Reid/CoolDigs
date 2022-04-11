@@ -19,7 +19,7 @@ This is a clone of HipCamp called CoolDigs. CoolDigs is a place where users can 
 ## Getting start
 
 1. Clone this repo.
-  * git@github.com:Kristen-Reid/CoolDigs.git
+  * [CoolDigs](git@github.com:Kristen-Reid/CoolDigs.git)
  
 2. Install dependencies from the root directory.
   * npm install
