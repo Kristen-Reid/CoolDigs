@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { updateSpot } from '../../store/spots';
 import { useHistory, useParams } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../svgImg/logo-white.svg';
-import '../EditSpotDetails/EditSpot.css';
 
 
 const EditSpotDetails = () => {

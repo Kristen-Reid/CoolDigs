@@ -37,9 +37,10 @@ const EditReviewsForm = ({review, setShowModal}) => {
             content
         }
 
-
-        await dispatch(updateReview(reviewForm));
-        setShowModal(false)
+        if (validationErrors.length === 0) {
+            await dispatch(updateReview(reviewForm));
+            setShowModal(false)
+        }
     }
 
     return (

@@ -17,6 +17,16 @@ const PostReviews = ({ spot }) => {
     const [hasSubmitted, setHasSubmitted] = useState(false);
     const [showError, setShowError] = useState(false);
 
+    useEffect(() => {
+        const errors = [];
+
+        if (!title?.length) errors.push('Please provide a title');
+        if (title?.length < 5 || title?.length > 50) errors.push('Title must be no between 5 and 50 characters.');
+        if (!content?.length) errors.push('Please provide review content.');
+        if (content?.length < 5) errors.push('Content must 5 characters or more.');
+
+        setValidationErrors(errors);
+    }, [title, content]);
 
     useEffect(() => {
         dispatch(getASpot(id))
@@ -26,6 +36,7 @@ const PostReviews = ({ spot }) => {
     const onSubmit = async (e) => {
         e.preventDefault();
         setHasSubmitted(true);
+        setShowError(true);
 
         const reviewForm = {
             title,
@@ -35,9 +46,11 @@ const PostReviews = ({ spot }) => {
         }
 
 
-        let create = await dispatch(createReview(reviewForm));
-        if (create) {
-            history.push(`/spots/${spot?.id}`)
+        if (validationErrors.length === 0) {
+            let create = await dispatch(createReview(reviewForm));
+            if (create) {
+                history.push(`/spots/${spot?.id}`)
+            }
         }
 
         setTitle('');
@@ -47,6 +60,16 @@ const PostReviews = ({ spot }) => {
 
     return (
         <div className='postReviewContainer'>
+            <div className='errors'>
+                {showError && (
+                <ul className="errors">
+                    {validationErrors.map(error => (
+                        <li key={error}>{error}</li>
+                    ))}
+                </ul>
+                )
+                }
+            </div>
             <form onSubmit={onSubmit}>
                 <div className='reviewContent'>
                     <input
