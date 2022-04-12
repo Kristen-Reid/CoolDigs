@@ -23,7 +23,7 @@
 .spotsBox{
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin: 35px;
     border-radius: 16px;
     box-shadow: white 0px 0 10px;
     transition: 0.5s ease;
@@ -34,8 +34,8 @@
 .spotsBox:hover {
     cursor: pointer;
     transform: scale(1.2);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, .06);
-    margin: 25px;
+    box-shadow: 5px 5px 15px white;
+    margin: 35px;
 }
 
 .imageBox{
