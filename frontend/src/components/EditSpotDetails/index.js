@@ -39,7 +39,7 @@ const EditSpotDetails = () => {
 
 
     useEffect(() => {
-         const errors = [];
+        const errors = [];
 
         const validImage = /\.(jpg|jpeg|png|gif)$/
         const validPrice = /^[^a-zA-Z][0-9]*\.?[0-9]*$/

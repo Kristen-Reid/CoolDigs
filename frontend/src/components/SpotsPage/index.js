@@ -13,14 +13,14 @@ const SpotsPage = () => {
             <h2 className='spotsPageTitle'>Camping Spots</h2>
             <div className='spotsContainer'>
                 {spotsArr.map((spot) => (
-                    <SpotsCard key={spot.id}
-                        id={spot.id}
+                    <SpotsCard key={spot?.id}
+                        id={spot?.id}
                         image={spot?.Images[0]?.image}
-                        title={spot.title}
-                        locationName={spot.locationName}
-                        city={spot.city}
-                        state={spot.state}
-                        price={spot.price}
+                        title={spot?.title}
+                        locationName={spot?.locationName}
+                        city={spot?.city}
+                        state={spot?.state}
+                        price={spot?.price}
                     />
                 ))}
             </div>

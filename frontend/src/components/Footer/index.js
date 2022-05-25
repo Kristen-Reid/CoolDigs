@@ -22,7 +22,7 @@ const Footer = () => {
             <div className='tech'>
                 <Node className='node'/>
                 <Express className='express'/>
-                <Postgres className='postgress'/>
+                <Postgres className='postgres'/>
                 <ReactIcon className='reactIcon'/>
             </div>
     </div>

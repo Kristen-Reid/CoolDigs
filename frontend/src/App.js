@@ -24,37 +24,39 @@ const App = () => {
 
 
   return (
-     <>
+    <>
       <Navigation isLoaded={isLoaded} />
-      <Switch>
-        <Route exact path='/'>
-          <HomePage />
-        </Route>
-        { user !== undefined ?
-          <Route exact path='/spots'>
-            <SpotsPage />
-          </Route> :
-          <Route>
+      {isLoaded && (
+        <Switch>
+          <Route exact path="/">
             <HomePage />
-          </Route> }
-        <Route exact path='/spots/new'>
-          <SpotsForm />
-        </Route>
-        <Route exact path='/spots/:id'>
-          <SpotDetail />
-        </Route>
-        <Route exact path='/spots/:id/edit'>
-          <EditSpotDetails />
-        </Route>
-        <Route>
-          <div className='pageNotFoundContainer'>
-            <h1 className='pageNotFound'>PAGE NOT FOUND</h1>
-          </div>
-        </Route>
-      </Switch>
-      <div className='footerApp'>
-        <Footer/>
-      </div>
+          </Route>
+          {user !== undefined ? (
+            <Route exact path="/spots">
+              <SpotsPage />
+            </Route>
+          ) : (
+            <Route>
+              <HomePage />
+            </Route>
+          )}
+          <Route exact path="/spots/new">
+            <SpotsForm />
+          </Route>
+          <Route exact path="/spots/:id">
+            <SpotDetail />
+          </Route>
+          <Route exact path="/spots/:id/edit">
+            <EditSpotDetails />
+          </Route>
+          <Route>
+            <div className="pageNotFoundContainer">
+              <h1 className="pageNotFound">PAGE NOT FOUND</h1>
+            </div>
+          </Route>
+        </Switch>
+      )}
+        <Footer className=''/>
     </>
   );
 }

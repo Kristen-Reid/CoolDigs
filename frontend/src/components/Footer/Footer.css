@@ -2,9 +2,9 @@
 
 .footerContainer {
     display: flex;
-    background-color: rgba(0, 0, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.9);
     justify-content: space-between;
-    position: fixed;
+    margin-top: 254px;
     width: 100%;
     top: calc(93%);
 }
@@ -12,7 +12,7 @@
 .name {
     color: white;
     font-family: 'Vazirmatn';
-    margin-left: 10px;
+    margin-left: 15px;
     margin-right: 10px;
 }
 
@@ -28,4 +28,19 @@
 .tech {
     display: flex;
     padding-right: 10px;
+}
+
+.node {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.express {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.postgres {
+    margin-left: 10px;
+    margin-right: 10px;
 }

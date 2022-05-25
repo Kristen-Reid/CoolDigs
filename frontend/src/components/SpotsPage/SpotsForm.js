@@ -88,7 +88,6 @@ const SpotsForm = () => {
                 )
                 }
             </div>
-                <img />
                 <div className='logoContainer'>
                     <h2 className='logoName'>CoolDigs</h2>
                     {<Logo/> }
