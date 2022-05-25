@@ -2,7 +2,7 @@
 
 .footerContainer {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.9);
+    /* background-color: rgba(0, 0, 0, 0.9); */
     justify-content: space-between;
     margin-top: 254px;
     width: 100%;
