@@ -12,7 +12,7 @@ const Footer = () => {
     return (
         <div className='footerContainer'>
                 <div className='aboutMe'>
-                    <p className='name'>Kristen Reid</p>
+                    <a href='https://kristenreid.dev' className='name'>Kristen Reid</a>
                     <a href='https://github.com/Kristen-Reid/CoolDigs' className='github'>
                             <GitHub/>
                         </a>

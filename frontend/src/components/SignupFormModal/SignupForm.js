@@ -13,6 +13,9 @@ const SignupForm = () => {
     const [errors, setErrors] = useState([]);
 
 
+    const demo = async () => {
+        return await dispatch(sessionActions.login({ 'credential': 'Demo-lition', 'password': 'password' }))
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -24,6 +27,8 @@ const SignupForm = () => {
                     if (data && data.errors) setErrors(data.errors);
                 });
         }
+
+
         return setErrors(['Confirm Password field must be the same as the Password field']);
     }
 
@@ -90,6 +95,11 @@ const SignupForm = () => {
                 <div>
                     <button type='submit' className='signupBtn'>Sign Up</button>
                 </div>
+                <div className='BtnContainer'>
+                        <button type='submit' className='demoBtn'
+                            onClick={ async () => demo()}
+                        >Demo Login</button>
+                    </div>
             </form>
         </div>
     )

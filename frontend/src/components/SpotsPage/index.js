@@ -12,7 +12,7 @@ const SpotsPage = () => {
         <div className='spotsPageContainer'>
             <h2 className='spotsPageTitle'>Camping Spots</h2>
             <div className='spotsContainer'>
-                {spotsArr.map((spot) => (
+                {spotsArr.reverse().map((spot) => (
                     <SpotsCard key={spot?.id}
                         id={spot?.id}
                         image={spot?.Images[0]?.image}

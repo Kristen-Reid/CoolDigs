@@ -75,7 +75,7 @@
 }
 
 .boxText{
-    color: white;
+    color: rgba(255, 255, 255, 87%);
     font-size: 20px;
     font-weight: bold;
     font-family: 'Vazirmatn';
@@ -83,7 +83,7 @@
 }
 
 .homePageGreet {
-    color: white;
+    color: rgba(255, 255, 255, 87%);
     font-family: 'Fredoka One';
     letter-spacing: 3px;
     font-size: 40px;
@@ -92,7 +92,7 @@
 }
 
 .homePageGreet2 {
-    color: white;
+    color: rgba(255, 255, 255, 87%);
     font-family: 'Fredoka One';
     letter-spacing: 3px;
     font-size: 25px;
@@ -109,7 +109,7 @@
     background-color: rgba(0, 0, 0, .5);
     border-radius: 10px;
     padding: 10px;
-    box-shadow: white 0px 0 10px;
+    box-shadow: rgba(255, 255, 255, 87%) 0px 0 10px;
 }
 
 .greet {
@@ -120,8 +120,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: blue;
-    background-color: white;
+    color: rgb(8, 8, 83);
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 87%);
     width: 120px;
     height: 40px;
     margin-top: 30px;
@@ -139,8 +140,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: blue;
-    background-color: white;
+    color: rgb(8, 8, 83);
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 87%);
     width: 160px;
     height: 40px;
     margin-top: 30px;

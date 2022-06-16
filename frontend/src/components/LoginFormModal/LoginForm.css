@@ -29,6 +29,8 @@
     border-radius: 8px;
     border: none;
     font-family: 'Vazirmatn';
+    font-size: 16px;
+    color: black;
 }
 
 .modalInput:hover {
@@ -45,6 +47,8 @@
     border-radius: 8px;
     border: none;
     font-family: 'Vazirmatn';
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .demoBtn {
@@ -54,6 +58,8 @@
     border: none;
     font-family: 'Vazirmatn';
     margin: 10px 0 0 0;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .loginBtn:hover {

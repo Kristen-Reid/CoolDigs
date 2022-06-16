@@ -11,7 +11,6 @@
 
 .profileBtn{
     margin-right: 50px;
-    /* margin-top: 30px; */
 }
 
 .profileBtn:hover {
@@ -30,7 +29,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
+    color: rgba(255, 255, 255, 87%);
     font-size: 18px;
     display: flex;
     border-radius: 4px;
@@ -42,8 +41,9 @@
     background-color: rgba(0, 0, 0, .5);
 }
 
+
 .dropdownContent li:hover {
-    color: white;
+    color: rgba(255, 255, 255, 87%);
     font-weight: bold;
 }
 

@@ -6,9 +6,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 30px;
-    /* background-color: rgba(0, 0, 0, .5); */
-    /* box-shadow: white 0px 0 10px; */
+    margin-top: 4px;
 }
 
 .navLink{
@@ -17,12 +15,12 @@
     font-size: 25px;
     margin-right: 10px;
     letter-spacing: 2px;
-    color: white;
+    color: rgba(255, 255, 255, 87%);
 }
 
 .navLink:hover{
     cursor:pointer;
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid rgba(255, 255, 255, 87%);
 }
 
 .homeBtn {
@@ -44,7 +42,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: rgba(255, 255, 255, 87%);
     display: flex;
     border-radius: 4px;
     justify-content: center;

@@ -20,7 +20,8 @@ const SpotDetail = () => {
 
     const user = useSelector(state => state.session.user);
     const spot = useSelector(state => state.spots[id]);
-
+    const reviews = spot?.Reviews
+    console.log(typeof reviews,'@@@@@@@@@@@@@@@@@@@@@@')
 
     return (
         <div className='spotPageContainer'>
@@ -35,7 +36,7 @@ const SpotDetail = () => {
                 <h2 className='spotTitle'>{spot?.title}</h2>
                 <p className='spotPrice'>{`$${spot?.price}`}</p>
                 <p className='spotStateAndCity'>{`${spot?.city}, ${spot?.state}`}</p>
-                <p>{`${spot?.description}`}</p>
+                <p className='spotsDescrip'>{`${spot?.description}`}</p>
                 </div>
                 {user?.id === spot?.userId && (
                 <div className='spotsBtnContainer'>
@@ -47,7 +48,7 @@ const SpotDetail = () => {
             <PostReviews spot={spot} />
 
             <div className='reviewContainer'>
-                {spot?.Reviews?.map(review => (
+                {reviews?.reverse().map(review => (
                     <div key={review?.id} className='reviewCard'>
                         <p className='rvwTitle'>{review?.title}</p>
                         <p className='rvwUserName'>{review?.User?.username}</p>
