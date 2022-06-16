@@ -43,8 +43,13 @@ const ProfileButton = ({ user }) => {
                 <div className='dropdownContainer'>
                     <div className='dropdownContent'>
                         <div className='dropdownInfoContainer'>
-                            <li className='dropdownInfo'>{user.username}</li>
-                            <li className='dropdownInfo'>{user.email}</li>
+                            <div>
+                                <li className='dropdownInfo'>Welcome</li>
+                            </div>
+                            <div>
+                                <li className='dropdownInfo2'>{user.username}</li>
+                            </div>
+                            {/* <li className='dropdownInfo'>{user.email}</li> */}
                         </div>
                         <div className='dropdownBtnContainer'>
                             <a className='dropdownList' onClick={logout}>Log Out</a>

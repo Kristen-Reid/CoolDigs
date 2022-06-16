@@ -11,7 +11,8 @@
 .spotsPageTitle {
     font-size: 50px;
     font-family: 'Fredoka One';
-    letter-spacing: 3px;
+    letter-spacing: 4px;
+    color: rgba(255, 255, 255, 87%);
 }
 
 .spotsContainer {
@@ -58,7 +59,7 @@
 
 .spotsImage{
     width: 380px;
-    height: 190px;
+    height: 250px;
     border-radius: 15px 15px 0 0;
     object-fit: cover;
 }

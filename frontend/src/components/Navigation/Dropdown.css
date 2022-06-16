@@ -10,7 +10,8 @@
 }
 
 .profileBtn{
-    margin: 20px;
+    margin-right: 50px;
+    /* margin-top: 30px; */
 }
 
 .profileBtn:hover {
@@ -21,11 +22,16 @@
     cursor: pointer;
 }
 
+.dropdownInfo2{
+    font-size: 20px;
+}
+
 .dropdownInfoContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
+    font-size: 18px;
     display: flex;
     border-radius: 4px;
     justify-content: center;
