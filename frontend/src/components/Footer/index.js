@@ -12,7 +12,11 @@ const Footer = () => {
     return (
         <div className='footerContainer'>
                 <div className='aboutMe'>
-                    <a href='https://kristenreid.dev' className='name'>Kristen Reid</a>
+                <a href='https://kristenreid.dev' className='name'>
+                    <span>
+                        Kristen Reid
+                    </span>
+                    </a>
                     <a href='https://github.com/Kristen-Reid/CoolDigs' className='github'>
                             <GitHub/>
                         </a>
