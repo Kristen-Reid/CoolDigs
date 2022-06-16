@@ -10,7 +10,7 @@
 
 .spotsPageTitle {
     font-size: 50px;
-    font-family: 'Fredoka One';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 4px;
     color: rgba(255, 255, 255, 87%);
 }
@@ -26,16 +26,16 @@
     flex-direction: column;
     margin: 35px;
     border-radius: 16px;
-    box-shadow: white 0px 0 10px;
-    transition: 0.5s ease;
-    background-color: rgba(0, 0, 0, .7);
+    /* box-shadow: black 0px 0 10px; */
+    transition: 0.4s ease;
     color: rgba(255, 255, 255, 87%);
+    background-color: rgba(0, 0, 0, .5);
 }
 
 .spotsBox:hover {
     cursor: pointer;
-    transform: scale(1.2);
-    box-shadow: 5px 5px 15px white;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px transparent;
     margin: 35px;
 }
 
