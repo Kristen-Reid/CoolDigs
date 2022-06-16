@@ -24,6 +24,10 @@ const EditSpotDetails = () => {
     const [validationErrors, setValidationErrors] = useState([]);
     const [showError, setShowError] = useState(false);
 
+    if (!user) {
+        history.push('/')
+    }
+
     useEffect(() => {
 
         setTitle(spots[id]?.title)

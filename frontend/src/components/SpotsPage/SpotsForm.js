@@ -12,6 +12,9 @@ const SpotsForm = () => {
     const history = useHistory();
     const user = useSelector(state => state.session.user);
 
+     if (!user) {
+        history.push('/')
+    }
 
     const [title, setTitle] = useState('');
     const [city, setCity] = useState('');
