@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { deleteSpot, getASpot } from '../../store/spots';
 import { deleteReview } from '../../store/reviews';
 import PostReviews from '../PostReviews';
@@ -11,8 +11,10 @@ import '../SpotDetails/SpotDetails.css';
 const SpotDetail = () => {
 
     const dispatch = useDispatch();
+    const history = useHistory();
     const { id } = useParams();
     const [hasDeleted, setHasDeleted] = useState(false);
+
 
     useEffect(() => {
         dispatch(getASpot(id))
@@ -23,6 +25,10 @@ const SpotDetail = () => {
     const reviews = spot?.Reviews
     console.log(typeof reviews,'@@@@@@@@@@@@@@@@@@@@@@')
 
+    if (!user) {
+        history.push('/')
+    }
+    
     return (
         <div className='spotPageContainer'>
             <div className='imageContainer'>

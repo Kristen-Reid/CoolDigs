@@ -1,16 +1,44 @@
 @import url(https://fonts.googleapis.com/css?family=Vazirmatn:100,200,300,regular,500,600,700,800,900);
 
 .pageNotFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     color: white;
     font-family: 'Vazirmatn';
     letter-spacing: 2px;
+    font-size: 55px;
 }
 
 .pageNotFoundContainer{
+    margin-bottom: 23vh;
+    margin-top: 190px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 body::-webkit-scrollbar {
     display: none;
+}
+
+.pageNotFoundHomeBtn {
+    background:none;
+    border:none;
+    margin-top: 50px;
+    padding:0;
+    cursor: pointer;
+    font-size: 36px;
+    color: rgba(255, 255, 255, 87%);
+    transition: 2s ease;
+}
+
+.pageNotFoundHomeBtn:hover {
+    font-size: 38px;
+    transform: scale(1.2);
+    font-weight: bold;
+    border-bottom: solid 2px rgba(255, 255, 255, 87%);
 }

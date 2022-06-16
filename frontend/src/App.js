@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import * as sessionActions from './store/session';
 import Navigation from './components/Navigation';
@@ -8,12 +8,14 @@ import SpotsForm from './components/SpotsPage/SpotsForm';
 import SpotsPage from './components/SpotsPage';
 import SpotDetail from './components/SpotDetails';
 import EditSpotDetails from './components/EditSpotDetails';
+import { ReactComponent as CryingFace } from '../src/svgImg/crying-face.svg'
 import Footer from './components/Footer';
 import { getSpots } from './store/spots';
 
 
 const App = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const user = useSelector(state => state.session.user);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -48,6 +50,8 @@ const App = () => {
           <Route>
             <div className="pageNotFoundContainer">
               <h1 className="pageNotFound">PAGE NOT FOUND</h1>
+              <CryingFace />
+              <button className='pageNotFoundHomeBtn' onClick={() => history.push('/')}>Home</button>
             </div>
           </Route>
         </Switch>
