@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Modal } from '../../context/Modal';
 import SignupForm from '../SignupFormModal/SignupForm';
+import Footer from '../Footer';
 import '../HomePage/Home.css';
 
 const HomePage = () => {
@@ -76,6 +77,7 @@ const HomePage = () => {
             className="homePic2"
           />
         </div>
+        <Footer className=''/>
       </div>
     );
 }

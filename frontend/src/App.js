@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import * as sessionActions from './store/session';
 import Navigation from './components/Navigation';
@@ -29,17 +29,13 @@ const App = () => {
       {isLoaded && (
         <Switch>
           <Route exact path="/">
+            {user && <Redirect to='/spots' />}
             <HomePage />
           </Route>
-          {user !== undefined ? (
             <Route exact path="/spots">
+            {!user && <Redirect to='/' />}
               <SpotsPage />
             </Route>
-          ) : (
-            <Route>
-              <HomePage />
-            </Route>
-          )}
           <Route exact path="/spots/new">
             <SpotsForm />
           </Route>

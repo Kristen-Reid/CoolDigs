@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { createSpot } from '../../store/spots';
+import Footer from '../Footer';
 import { ReactComponent as Logo } from '../../svgImg/logo-white.svg';
 import '../SpotsPage/SpotsForm.css'
 
@@ -165,6 +166,7 @@ const SpotsForm = () => {
                     </div>
                 </form>
             </div>
+        {/* <Footer/> */}
         </div>
     )
 }
