@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import SpotsCard from './SpotsCard';
-import Footer from '../Footer';
 import '../SpotsPage/SpotsPage.css';
 
 const SpotsPage = () => {
@@ -25,8 +24,6 @@ const SpotsPage = () => {
                     />
                 ))}
             </div>
-        {/* <Footer className=''/> */}
-
         </div>
     )
 }

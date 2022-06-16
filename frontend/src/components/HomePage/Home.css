@@ -36,11 +36,11 @@
 }
 
 .box1 {
-    /* background-color:  rgb(8, 8, 83); */
+    background-color:  rgb(8, 8, 83);
     margin: 15px 20px 15px 0;
     transition: 0.5s ease;
     box-shadow: white 0px 0 10px;
-    background-color: rgba(0, 0, 0, .7);
+    /* background-color: rgba(0, 0, 0, .7); */
 
 }
 
@@ -52,11 +52,11 @@
 }
 
 .box2 {
-    /* background-color: rgb(8, 8, 83); */
+    background-color: rgb(8, 8, 83);
     margin: 15px 0px 15px 20px;
     transition: 0.5s ease;
     box-shadow: white 0px 0 10px;
-    background-color: rgba(0, 0, 0, .7);
+    /* background-color: rgba(0, 0, 0, .7); */
 }
 
 .box2Img {
@@ -105,6 +105,7 @@
     flex-direction: column;
     width: 800px;
     margin: 10px;
+    margin-top: 100px;
     background-color: rgba(0, 0, 0, .5);
     border-radius: 10px;
     padding: 10px;

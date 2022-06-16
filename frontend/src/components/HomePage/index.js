@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Modal } from '../../context/Modal';
 import SignupForm from '../SignupFormModal/SignupForm';
-import Footer from '../Footer';
 import '../HomePage/Home.css';
 
 const HomePage = () => {
@@ -36,9 +35,9 @@ const HomePage = () => {
         </div>
         <div className="homeImg">
           <img
-            src="https://specials-images.forbesimg.com/imageserve/591656039/960x0.jpg?fit=scale"
+            src="https://www.outsideonline.com/wp-content/uploads/2020/11/10/couple-camping-on-beach_h.jpg?crop=16:9&width=960&enable=upscale&quality=100"
             className="homePic"
-          />
+            />
         </div>
         <div className="homeBoxContainer1" onClick={() => setShowModal(true)}>
           {showModal && (
@@ -50,7 +49,7 @@ const HomePage = () => {
             <img
               src="https://bloximages.newyork1.vip.townnews.com/sandiegomagazine.com/content/tncms/assets/v3/editorial/e/14/e147cebe-8366-56c1-9466-a29590fdf155/5e14dbc21e599.image.jpg"
               className="box1Img"
-            />
+              />
             <div className="box1Content">
               <p className="boxText">
                 Longer days + warmer nights. Explore newly unlocked spots!
@@ -62,7 +61,7 @@ const HomePage = () => {
             <img
               src="https://i.pinimg.com/originals/19/a8/88/19a8880ac71fa5fee403bc456cb4eeb0.jpg"
               className="box2Img"
-            />
+              />
             <div className="box2Content">
               <p className="boxText">
                 See America's Best CoolDigs to Visit in 2022
@@ -73,11 +72,10 @@ const HomePage = () => {
         </div>
         <div className="homeImg2">
           <img
-            src="https://www.outsideonline.com/wp-content/uploads/2020/11/10/couple-camping-on-beach_h.jpg?crop=16:9&width=960&enable=upscale&quality=100"
+            src="https://i0.wp.com/alwaysonliberty.com/wp-content/uploads/2019/03/Always-On-Liberty-Dark-Sky-Camping.png?fit=1400%2C787&ssl=1"
             className="homePic2"
           />
         </div>
-        <Footer className=''/>
       </div>
     );
 }

@@ -5,6 +5,7 @@ import { ReactComponent as Node } from '../../svgImg/node.svg';
 import { ReactComponent as Express } from '../../svgImg/express.svg';
 import { ReactComponent as Postgres } from '../../svgImg/postgres.svg';
 import { ReactComponent as ReactIcon } from '../../svgImg/react.svg';
+import { ReactComponent as ReduxIcon } from '../../svgImg/redux.svg';
 import '../Footer/Footer.css';
 
 const Footer = () => {
@@ -15,15 +16,16 @@ const Footer = () => {
                     <a href='https://github.com/Kristen-Reid/CoolDigs' className='github'>
                             <GitHub/>
                         </a>
-                    <a href='https://www.linkedin.com/in/kristen-reid-a4b499202/' className='linkedin'>
+                    <a href='https://www.linkedin.com/in/kristen-reid-a4b499202/' className='linkedIn'>
                             <LinkedIn/>
                         </a>
                 </div>
             <div className='tech'>
-                <Node className='node'/>
+                <ReactIcon className='react' />
+                <ReduxIcon className='redux'/>
                 <Express className='express'/>
+                <Node className='node'/>
                 <Postgres className='postgres'/>
-                <ReactIcon className='reactIcon'/>
             </div>
     </div>
     )

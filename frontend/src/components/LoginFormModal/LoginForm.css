@@ -19,6 +19,7 @@
 .logoName {
     font-family: 'Fredoka One';
     font-size: 32px;
+    letter-spacing: 2px;
 }
 
 .modalInput {
@@ -74,7 +75,7 @@
 .logoContainer {
     align-items: center;
     justify-content: center;
-    
+
 }
 
 .BtnContainer {

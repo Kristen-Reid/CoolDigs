@@ -12,8 +12,10 @@
 .name {
     color: white;
     font-family: 'Vazirmatn';
-    margin-left: 15px;
+    font-size: 20px;
+    margin-left: 25px;
     margin-right: 10px;
+    letter-spacing: 1.5px;
 }
 
 .linkedin {
@@ -41,6 +43,26 @@
 }
 
 .postgres {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.react {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.redux {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.github {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.linkedIn {
     margin-left: 10px;
     margin-right: 10px;
 }

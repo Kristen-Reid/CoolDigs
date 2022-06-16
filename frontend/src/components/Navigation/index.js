@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import SignupFormModal from '../SignupFormModal';
-import { ReactComponent as Logo } from '../../svgImg/logo.svg'
+import { ReactComponent as Logo } from '../../svgImg/logo-white.svg'
 import './Navigation.css';
 
 const Navigation = ({ isLoaded }) => {

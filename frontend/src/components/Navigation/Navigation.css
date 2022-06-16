@@ -6,15 +6,17 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    /* background-color: rgba(0, 0, 0, .5); */
+    /* box-shadow: white 0px 0 10px; */
 }
 
 .navLink{
     font-family: 'Fredoka One';
     margin: 5px;
-    font-size: 20px;
+    font-size: 25px;
     margin-right: 10px;
-    letter-spacing: 1.5px;
-
+    letter-spacing: 2px;
+    color: white;
 }
 
 .navLink:hover{
@@ -26,7 +28,8 @@
     font-size: 32px;
     font-family: 'Fredoka One';
     margin-left: 20px;
-    color: black;
+    color: white;
+    letter-spacing: 2px;
 }
 
 a {
