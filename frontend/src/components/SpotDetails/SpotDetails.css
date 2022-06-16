@@ -166,5 +166,6 @@
 }
 
 .errors {
-    color: white;
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

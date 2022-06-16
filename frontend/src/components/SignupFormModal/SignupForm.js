@@ -94,12 +94,12 @@ const SignupForm = () => {
                 </div>
                 <div>
                     <button type='submit' className='signupBtn'>Sign Up</button>
-                </div>
-                <div className='BtnContainer'>
                         <button type='submit' className='demoBtn'
                             onClick={ async () => demo()}
                         >Demo Login</button>
-                    </div>
+                </div>
+                {/* <div className='BtnContainer'>
+                    </div> */}
             </form>
         </div>
     )

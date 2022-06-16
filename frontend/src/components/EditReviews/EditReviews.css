@@ -83,6 +83,6 @@ textarea:focus, input:focus{
 
 
 .errors {
-    color: white;
-    margin-left: 20px;
+    /* color: red; */
+    margin-bottom: 20px;
 }
