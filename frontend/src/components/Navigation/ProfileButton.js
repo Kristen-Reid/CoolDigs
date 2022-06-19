@@ -52,9 +52,9 @@ const ProfileButton = ({ user }) => {
                             {/* <li className='dropdownInfo'>{user.email}</li> */}
                         </div>
                         <div className='dropdownBtnContainer'>
-                            <a className='dropdownList' onClick={logout}>Log Out</a>
                             <NavLink className='dropdownList' to='/spots'>Camping Spots</NavLink>
                             <NavLink className='dropdownList' to='/spots/new'>Add A New Spot</NavLink>
+                            <a className='dropdownList' onClick={logout}>Log Out</a>
                         </div>
                     </div>
                 </div>

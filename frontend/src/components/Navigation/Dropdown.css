@@ -22,7 +22,7 @@
 }
 
 .dropdownInfo2{
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .dropdownInfoContainer {
@@ -37,7 +37,7 @@
     width: 100%;
     font-weight: bolder;
     height: 75px;
-    box-shadow: 0 0px 5px;
+    /* box-shadow: 0 0px 5px; */
     background-color: rgba(0, 0, 0, .5);
 }
 

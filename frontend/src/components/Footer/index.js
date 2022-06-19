@@ -17,13 +17,15 @@ const Footer = () => {
                         Kristen Reid
                     </span>
                     </a>
+                <div>
                     <a href='https://github.com/Kristen-Reid/CoolDigs' className='github'>
                             <GitHub/>
                         </a>
                     <a href='https://www.linkedin.com/in/kristen-reid-a4b499202/' className='linkedIn'>
                             <LinkedIn/>
-                        </a>
+                    </a>
                 </div>
+            </div>
             <div className='tech'>
                 <ReactIcon className='react' />
                 <ReduxIcon className='redux'/>
