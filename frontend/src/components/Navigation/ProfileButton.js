@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
-import { ReactComponent as ProfilePic } from '../../svgImg/profileImg.svg'
+import { ReactComponent as ProfilePic } from '../../svgImg/profileImg2.svg'
 import '../Navigation/Dropdown.css'
 
 

@@ -47,7 +47,7 @@ const LoginForm = () => {
                         type='text'
                         value={credential}
                         onChange={(e) => setCredential(e.target.value)}
-                        placeholder='Username or Email'
+                        placeholder='Username or Email address...'
                         required
                     />
                     </label>
@@ -60,13 +60,13 @@ const LoginForm = () => {
                         type='password'
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        placeholder='Password'
+                        placeholder='Password...'
                         required
                     />
                     </label>
                 </div>
                     <div className='BtnContainer'>
-                        <button type='submit' className='loginBtn'>Log In</button>
+                        <button type='submit' className='loginBtn'>Log in</button>
                         <button type='submit' className='demoBtn'
                             onClick={ async () => demo()}
                         >Demo Login</button>

@@ -1,24 +1,28 @@
 .editReviewContainer{
-    background-color: black;
-    box-shadow: white 0px 0 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 350px;
     height: auto;
     margin: 75px;
     padding: 25px 30px 30px 30px;
-    border-radius: 10px;
+    background-color: rgba(245, 237, 237, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
 }
 
 .editTitleInput {
-    padding: 10px;
-    margin: 0px 0px 10px 0px;
-    width: 250px;
-    border-radius: 8px;
+    padding: 16px;
+    margin: 0px 20px 10px 20px;
+    width: 275px;
+    border-radius: 2px;
     border: none;
     font-family: 'Vazirmatn';
+    font-weight: bold;
+    font-size: 16px;
+    color: #121212;
+    background-color: rgba(255, 255, 255, 87%);
 }
 
 .editTitleInput:hover {
@@ -30,14 +34,21 @@
 }
 
 .editContentInput {
-    align-items: flex-start;
-    padding: 10px;
-    margin: 0px 0px 10px 0px;
-    width: 250px;
-    height: 75px;
-    border-radius: 8px;
+    margin: 0px 20px 10px 20px;
+    border-radius: 2px;
     border: none;
     font-family: 'Vazirmatn';
+    font-weight: bold;
+    font-size: 16px;
+    color: #121212;
+    background-color: rgba(255, 255, 255, 87%);
+    align-items: flex-start;
+    padding: 20px;
+    width: 268px;
+    height: 80px;
+    resize: none;
+    outline: none;
+    overflow-y: auto;
 }
 
 .editContentInput:hover {
@@ -49,11 +60,17 @@
 }
 
 .editContentInput::-webkit-scrollbar {
-    background-color: black;
+    border-right: .5px rgba(255, 255, 255, 87%) solid;
+    border-left: .5px rgba(255, 255, 255, 87%) solid;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-color: #121212;
 }
 
 .editContentInput::-webkit-scrollbar-thumb {
-    background-color: rgb(52, 47, 47);
+    background-color: #121212;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
 }
 textarea {
     border: none;
@@ -64,25 +81,30 @@ textarea:focus, input:focus{
 }
 
 .editRvwBtn {
-    padding: 10px;
-    width: 275px;
+    padding: 20px;
+    margin-left: 15px;
+    width: 316px;
     border-radius: 8px;
     border: none;
     font-family: 'Vazirmatn';
-    color: white;
-    font-size: 18px;
-    background-color: rgb(90, 81, 81);
+    color: rgba(255, 255, 255, 87%);
+    letter-spacing: 1.2px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #343D73;
+    transition: box-shadow .2s .2s ease, transform .4s ease;
+
 }
 
 .editRvwBtn:hover {
     cursor: pointer;
-    background-color: blue;
-    color: white;
+    background-color: #800FF2;
+    color: rgba(255, 255, 255, 87%);
     font-weight: bold;
 }
 
 
 .errors {
-    /* color: red; */
     margin-bottom: 20px;
+    padding-left: 8px;
 }

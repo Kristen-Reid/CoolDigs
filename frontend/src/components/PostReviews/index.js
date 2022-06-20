@@ -60,6 +60,8 @@ const PostReviews = ({ spot }) => {
 
     return (
         <div className='postReviewContainer'>
+
+            <form onSubmit={onSubmit}>
             <div className='errors'>
                 {showError && (
                 <ul className="errors">
@@ -69,13 +71,11 @@ const PostReviews = ({ spot }) => {
                 </ul>
                 )
                 }
-            </div>
-            <form onSubmit={onSubmit}>
                 <div className='reviewContent'>
                     <input
                         className='reviewTitleInput'
                         type='text'
-                        placeholder='Add Review Title (optional)'
+                        placeholder='Add Review Title (optional)...'
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                     />
@@ -84,7 +84,7 @@ const PostReviews = ({ spot }) => {
                     <textarea
                         className='reviewContentInput'
                         type='text'
-                        placeholder='Add Review Content'
+                        placeholder='Add Review Content...'
                         value={content}
                         onChange={(e) => setContent(e.target.value)}
                     />
@@ -94,6 +94,7 @@ const PostReviews = ({ spot }) => {
                         type='submit'
                         className='postRvwBtn'
                     >Post Review</button>
+                </div>
                 </div>
             </form>
         </div>

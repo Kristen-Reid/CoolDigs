@@ -9,6 +9,8 @@ import { ReactComponent as ReduxIcon } from '../../svgImg/redux.svg';
 import '../Footer/Footer.css';
 
 const Footer = () => {
+    const date = new Date();
+
     return (
         <div className='footerContainer'>
                 <div className='aboutMe'>

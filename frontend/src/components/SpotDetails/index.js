@@ -28,7 +28,7 @@ const SpotDetail = () => {
     if (!user) {
         history.push('/')
     }
-    
+
     return (
         <div className='spotPageContainer'>
             <div className='imageContainer'>
@@ -42,7 +42,7 @@ const SpotDetail = () => {
                 <h2 className='spotTitle'>{spot?.title}</h2>
                 <p className='spotPrice'>{`$${spot?.price}`}</p>
                 <p className='spotStateAndCity'>{`${spot?.city}, ${spot?.state}`}</p>
-                <p className='spotsDescrip'>{`${spot?.description}`}</p>
+                <div className='spotsDescrip'><p>{`${spot?.description}`}</p></div>
                 </div>
                 {user?.id === spot?.userId && (
                 <div className='spotsBtnContainer'>
@@ -53,6 +53,9 @@ const SpotDetail = () => {
 
             <PostReviews spot={spot} />
 
+            <div className='rvwCount'>
+                {reviews?.length} Reviews
+            </div>
             <div className='reviewContainer'>
                 {reviews?.map(review => (
                     <div key={review?.id} className='reviewCard'>
