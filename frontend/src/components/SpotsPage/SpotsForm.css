@@ -84,6 +84,7 @@
 
 
 .postBtn:hover {
+    background-color: #800FF2;
     font-weight: bold;
     font-size: 18px;
     width: 375px;

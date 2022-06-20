@@ -54,7 +54,7 @@ const EditReviewsForm = ({review, setShowModal}) => {
                     <input
                         className='editTitleInput'
                         type='text'
-                        placeholder='Review Title (optional)'
+                        placeholder='Review Title (optional)...'
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                     />
@@ -63,7 +63,7 @@ const EditReviewsForm = ({review, setShowModal}) => {
                     <textarea
                         className='editContentInput'
                         type='text'
-                        placeholder='Review Content'
+                        placeholder='Review Content...'
                         value={content}
                         onChange={(e) => setContent(e.target.value)}
                     />

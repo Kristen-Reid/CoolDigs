@@ -67,7 +67,8 @@
     margin: 10px 50px 70px 50px;
     font-size: 18px;
     font-weight: bold;
-    background-color: rgb(67, 16, 148);
+    /* background-color: rgb(67, 16, 148); */
+    background-color: #800FF2;
     color: rgba(255, 255, 255, 87%);
     transition: box-shadow .2s .2s ease, transform .2s ease;
 }
