@@ -56,7 +56,7 @@ const SpotDetail = () => {
                 {reviews?.length} Reviews
             </div>
             <div className='reviewContainer'>
-                {reviews?.map(review => (
+                {Object.values(reviews).reverse().map(review => (
                     <div key={review?.id} className='reviewCard'>
                         <p className='rvwTitle'>{review?.title}</p>
                         <p className='rvwUserName'>{review?.User?.username}</p>
