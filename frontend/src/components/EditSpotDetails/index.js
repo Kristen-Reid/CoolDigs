@@ -177,7 +177,7 @@ const EditSpotDetails = () => {
                         <button
                             type='submit'
                             className='postBtn'
-                        >Post New Spot</button>
+                        >Edit Spot</button>
                     </div>
                 </form>
             </div>

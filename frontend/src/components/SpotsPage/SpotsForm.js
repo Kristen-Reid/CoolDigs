@@ -101,7 +101,7 @@ const SpotsForm = () => {
                         <input
                             className='spotsInput'
                             type='text'
-                            placeholder='Title'
+                            placeholder='Title...'
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
                         />
@@ -110,7 +110,7 @@ const SpotsForm = () => {
                         <input
                             className='spotsInput'
                             type='text'
-                            placeholder='City'
+                            placeholder='City...'
                             value={city}
                             onChange={(e) => setCity(e.target.value)}
                         />
@@ -119,7 +119,7 @@ const SpotsForm = () => {
                         <input
                             className='spotsInput'
                             type='text'
-                            placeholder='State'
+                            placeholder='State...'
                             value={state}
                             onChange={(e) => setState(e.target.value)}
                         />
@@ -128,7 +128,7 @@ const SpotsForm = () => {
                         <input
                             className='spotsInput'
                             type='text'
-                            placeholder='Location Name'
+                            placeholder='Location Name...'
                             value={locationName}
                             onChange={(e) => setLocationName(e.target.value)}
                         />
@@ -137,7 +137,7 @@ const SpotsForm = () => {
                         <input
                             className='spotsInput'
                             type='text'
-                            placeholder='Price'
+                            placeholder='Price...'
                             value={price}
                             onChange={(e) => setPrice(e.target.value)}
                         />
@@ -146,7 +146,7 @@ const SpotsForm = () => {
                         <textarea
                             className='spotsInput spotsTextarea'
                             type='text'
-                            placeholder='Description'
+                            placeholder='Description...'
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
                         />
@@ -155,7 +155,7 @@ const SpotsForm = () => {
                         <input
                             className='spotsInput'
                             type='text'
-                            placeholder='Image'
+                            placeholder='Image...'
                             value={image}
                             onChange={(e) => setImage(e.target.value)}
                         />

@@ -22,8 +22,6 @@
     margin-top: 50px;
     border-radius: 10px;
     color: rgba(255, 255, 255, 87%);
-    /* background-color: black; */
-    /* box-shadow: white 0px 0 10px; */
 }
 
 .spotsInput {
@@ -70,7 +68,7 @@
 }
 
 .postBtn {
-    background-color: rgb(13, 13, 112);
+    background-color: #343D73;
     padding: 20px;
     width: 375px;
     border-radius: 4px;
@@ -81,7 +79,7 @@
     font-size: 16px;
     font-weight: bold;
     color: white;
-    transition: box-shadow .2s .2s ease, transform 2s ease;
+    transition: box-shadow .2s .2s ease, transform .4s ease;
 }
 
 
@@ -91,7 +89,6 @@
     width: 375px;
     cursor: pointer;
     border: none;
-    box-shadow: 0 2px 4px 0 rgb(0 0 0);
     transform: translateY(-3px);
 }
 

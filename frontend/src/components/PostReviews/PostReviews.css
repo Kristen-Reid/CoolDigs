@@ -2,13 +2,13 @@
 
 
 .postReviewContainer{
-    background-color: black;
+    /* background-color: black; */
     /* box-shadow: white 0px 0 10px; */
+    /* width: 350px; */
+    /* flex-direction: row; */
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
-    width: 300px;
     height: auto;
     margin: 75px;
     padding: 25px 30px 30px 30px;
@@ -16,13 +16,16 @@
 }
 
 .reviewTitleInput {
-    padding: 10px;
+    padding: 20px;
     margin: 0px 0px 10px 0px;
-    width: 250px;
+    width: 375px;
     border-radius: 8px;
     border: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: #121212;
     font-family: 'Vazirmatn';
-    background-color: white;
+    background-color: rgba(255, 255, 255, 87%);
 }
 
 .reviewTitleInput:hover {
@@ -35,13 +38,19 @@
 
 .reviewContentInput {
     align-items: flex-start;
-    padding: 10px;
+    padding: 20px;
     margin: 0px 0px 10px 0px;
-    width: 250px;
+    width: 375px;
     height: 75px;
     border-radius: 8px;
     border: none;
     font-family: 'Vazirmatn';
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    background-color: rgba(255, 255, 255, 87%);
+    resize: none;
+    outline: none;
 }
 
 .reviewContentInput:hover {
@@ -54,21 +63,23 @@
 
 
 .postRvwBtn {
-    padding: 10px;
-    width: 271px;
+    padding: 20px;
+    width: 416px;
     border-radius: 8px;
     border: none;
     font-family: 'Vazirmatn';
-    color: white;
+    color: rgba(255, 255, 255, 87%);
     letter-spacing: 1.2px;
-    font-size: 18px;
-    background-color: rgb(90, 81, 81);
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #343D73;
+    transition: box-shadow .2s .2s ease, transform .4s ease;
 }
 
 .postRvwBtn:hover {
     cursor: pointer;
-    background-color: blue;
     color: white;
     font-weight: bold;
     font-size: 18px;
+    transform: translateY(-3px);
 }
