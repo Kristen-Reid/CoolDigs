@@ -156,8 +156,8 @@ const EditSpotDetails = () => {
                         />
                     </div>
                     <div>
-                        <input
-                            className='spotsInput'
+                        <textarea
+                            className='spotsInput spotsTextarea'
                             type='text'
                             placeholder='Description'
                             value={description}

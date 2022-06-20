@@ -18,22 +18,38 @@
     width: 400px;
     height:auto;
     text-align: center;
-    margin-bottom: 280px;
-    background-color: black;
+    margin-bottom: 240px;
+    margin-top: 100px;
     border-radius: 10px;
     color: white;
-    box-shadow: white 0px 0 10px;
+    /* background-color: black; */
+    /* box-shadow: white 0px 0 10px; */
 }
 
 .spotsInput {
-    padding: 10px;
-    margin: 0px 0px 10px 0px;
-    width: 250px;
-    border-radius: 8px;
+    padding: 16px;
+    margin: 0px 0px 15px 0px;
+    width: 342px;
+    border-radius: 4px;
     border: none;
     font-family: 'Vazirmatn';
+    font-weight: bold;
     font-size: 16px;
     color: black;
+    overflow-y: auto;
+}
+
+.spotsTextarea::-webkit-scrollbar {
+    border-right: .5px black solid;
+    border-left: .5px black solid;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.spotsTextarea::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
 }
 
 .spotsInput:hover {
@@ -44,24 +60,37 @@
     cursor: text;
 }
 
+.spotsTextarea {
+    height: 80px;
+    border: none;
+    resize: none;
+    outline: none;
+}
+
 .postBtn {
-    padding: 10px;
-    width: 275px;
-    border-radius: 8px;
+    background-color: rgb(22, 22, 210);
+    padding: 20px;
+    width: 375px;
+    border-radius: 4px;
     border: none;
     font-family: 'Vazirmatn';
     margin-bottom: 20px;
+    margin-top: 20px;
     font-size: 16px;
     font-weight: bold;
+    color: white;
+    transition: box-shadow .2s .2s ease, transform 2s ease;
 }
 
+
 .postBtn:hover {
-    background-color: rgb(18, 18, 119);
-    color: white;
     font-weight: bold;
+    font-size: 18px;
+    width: 375px;
     cursor: pointer;
     border: none;
-    box-shadow: white 0px 0 10px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0);
+    transform: translateY(-3px);
 }
 
 .errors {

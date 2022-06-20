@@ -3,17 +3,10 @@
 .footerContainer {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
     width: 100%;
-    top: calc(93%);
+    /* top: calc(93%); */
 }
 
-
-/* .name span {
-    width: 130px;
-    overflow: hidden;
-    display: flex;
-} */
 
 .name {
     color: rgba(255, 255, 255, 87%);
@@ -28,11 +21,11 @@
 
 .name:hover span {
     display: none;
-    /* transform: scale(1.1); */
+    transform: scale(1.1);
 }
 
 .name:hover {
-    transform: scale(1);
+    transform: scale(1.1);
     width: 140px;
     height: 60px;
     /* margin-top: 10px; */
@@ -86,7 +79,7 @@
 }
 
 .github {
-    margin-left: 40px;
+    margin-left: 15px;
     margin-right: 10px;
 }
 
