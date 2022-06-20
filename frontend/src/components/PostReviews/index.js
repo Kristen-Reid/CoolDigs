@@ -28,7 +28,7 @@ const PostReviews = ({ spot }) => {
 
     useEffect(() => {
         dispatch(getASpot(id))
-    }, [hasSubmitted]);
+    }, [hasSubmitted, dispatch, id]);
 
 
     const onSubmit = async (e) => {
