@@ -99,7 +99,7 @@ textarea:focus, input:focus{
 .editRvwBtn:hover {
     cursor: pointer;
     background-color: #800FF2;
-    color: white;
+    color: rgba(255, 255, 255, 87%);
     font-weight: bold;
 }
 

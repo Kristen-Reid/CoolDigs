@@ -39,7 +39,9 @@
     font-weight: bolder;
     height: 75px;
     /* box-shadow: 0 0px 5px; */
-    background-color: rgba(0, 0, 0, .5);
+    /* background-color: rgba(0, 0, 0, .5); */
+    background-color: rgba(245, 237, 237, 0.1);
+    backdrop-filter: blur(3px);
 }
 
 
@@ -53,4 +55,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: rgba(255, 255, 255, 87%);
 }

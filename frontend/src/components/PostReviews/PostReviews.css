@@ -2,10 +2,6 @@
 
 
 .postReviewContainer{
-    /* background-color: black; */
-    /* box-shadow: white 0px 0 10px; */
-    /* width: 350px; */
-    /* flex-direction: row; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,7 +75,7 @@
 .postRvwBtn:hover {
     background-color: #800FF2;
     cursor: pointer;
-    color: white;
+    color: rgba(255, 255, 255, 87%);
     font-weight: bold;
     font-size: 18px;
     transform: translateY(-3px);
