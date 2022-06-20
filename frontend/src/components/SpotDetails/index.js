@@ -22,8 +22,7 @@ const SpotDetail = () => {
 
     const user = useSelector(state => state.session.user);
     const spot = useSelector(state => state.spots[id]);
-    const reviews = spot?.Reviews
-    console.log(typeof reviews,'@@@@@@@@@@@@@@@@@@@@@@')
+    const reviews = spot?.Reviews;
 
     if (!user) {
         history.push('/')
@@ -68,7 +67,7 @@ const SpotDetail = () => {
                                 <EditReviewsModal review={review} />
                             </div>
                             <div className='rvwDeleteBtn'>
-                                <button className='rvwBtnTxt' onClick={async () => { await dispatch(deleteReview(review?.id)); setHasDeleted(!hasDeleted) }}>Delete Review</button>
+                                <a className='rvwBtnTxt' onClick={async () => { await dispatch(deleteReview(review?.id)); setHasDeleted(!hasDeleted) }}>Delete Review</a>
                             </div>
                         </div>
                         )}
