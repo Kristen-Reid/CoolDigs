@@ -18,7 +18,7 @@ const SpotDetail = () => {
 
     useEffect(() => {
         dispatch(getASpot(id))
-    }, [hasDeleted])
+    }, [hasDeleted, id, dispatch])
 
     const user = useSelector(state => state.session.user);
     const spot = useSelector(state => state.spots[id]);
@@ -54,7 +54,7 @@ const SpotDetail = () => {
             <PostReviews spot={spot} />
 
             <div className='reviewContainer'>
-                {reviews?.reverse().map(review => (
+                {reviews?.map(review => (
                     <div key={review?.id} className='reviewCard'>
                         <p className='rvwTitle'>{review?.title}</p>
                         <p className='rvwUserName'>{review?.User?.username}</p>
@@ -65,7 +65,7 @@ const SpotDetail = () => {
                                 <EditReviewsModal review={review} />
                             </div>
                             <div className='rvwDeleteBtn'>
-                                <a className='rvwBtnTxt' onClick={async () => { await dispatch(deleteReview(review?.id)); setHasDeleted(!hasDeleted) }}>Delete Review</a>
+                                <button className='rvwBtnTxt' onClick={async () => { await dispatch(deleteReview(review?.id)); setHasDeleted(!hasDeleted) }}>Delete Review</button>
                             </div>
                         </div>
                         )}
