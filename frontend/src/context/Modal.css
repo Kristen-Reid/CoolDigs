@@ -16,12 +16,11 @@
   left: 0;
   bottom: 0;
   backdrop-filter: blur(4px);
-  background-color: rgba(0, 0, 0, 0.7);
+  /* background-color: rgba(0, 0, 0, 0.7); */
 
 }
 
 #modal-content {
   position: absolute;
   border-radius: 16px;
-  box-shadow: white 0px 0 10px;
 }
