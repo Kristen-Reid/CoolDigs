@@ -92,7 +92,7 @@
 }
 
 .spotsEditBtn:hover {
-    background-color: #800FF2;
+    background-color: #248bde;
 }
 
 .spotsBtnTxt {
@@ -167,8 +167,8 @@
 
 .editRvwLink:hover {
     cursor: pointer;
-    color: #800FF2;
-    border-bottom: 5px #800FF2 solid;
+    color: #248bde;
+    border-bottom: 5px #248bde solid;
     font-size: 18px;
 }
 
@@ -207,4 +207,5 @@
 .errors {
     color: red;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 10px;
 }

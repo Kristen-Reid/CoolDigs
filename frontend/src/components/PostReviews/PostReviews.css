@@ -91,7 +91,7 @@ textarea:focus, input:focus{
 }
 
 .postRvwBtn:hover {
-    background-color: #800FF2;
+    background-color: #0a599a;
     cursor: pointer;
     color: rgba(255, 255, 255, 87%);
     font-weight: bold;

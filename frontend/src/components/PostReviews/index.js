@@ -21,7 +21,7 @@ const PostReviews = ({ spot }) => {
         const errors = [];
 
         if (!content?.length) errors.push('Please provide review content.');
-        if (content?.length < 5) errors.push('Content must 5 characters or more.');
+        if (content?.length < 5) errors.push('Content must be 5 characters or more.');
 
         setValidationErrors(errors);
     }, [content]);
