@@ -55,13 +55,11 @@ const SpotDetail = () => {
                 <div className='rvwCount'>
                     {reviews?.length} Review
                 </div>
-                    ) : reviews?.length !== 0 && reviews?.length > 1 ? (
+                    ) : (
                 <div className='rvwCount'>
                     {reviews?.length} Reviews
                 </div>
-                ) : (
-                    null
-                    )}
+                        )}
             <div className='reviewContainer'>
                 {reviews?.reverse().map(review => (
                     <div key={review?.id} className='reviewCard'>
