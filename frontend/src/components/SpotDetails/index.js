@@ -51,10 +51,15 @@ const SpotDetail = () => {
                 )}
 
             <PostReviews spot={spot} />
-
-            <div className='rvwCount'>
-                {reviews?.length} Reviews
-            </div>
+            {reviews?.length === 1 ? (
+                <div className='rvwCount'>
+                    {reviews?.length} Review
+                </div>
+                    ) : (
+                <div className='rvwCount'>
+                    {reviews?.length} Reviews
+                </div>
+                        )}
             <div className='reviewContainer'>
                 {reviews?.reverse().map(review => (
                     <div key={review?.id} className='reviewCard'>

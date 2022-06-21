@@ -15,7 +15,7 @@
     padding: 20px;
     margin: 0px 0px 10px 0px;
     width: 375px;
-    border-radius: 8px;
+    border-radius: 2px;
     border: none;
     font-weight: bold;
     font-size: 16px;
@@ -38,7 +38,7 @@
     margin: 0px 0px 10px 0px;
     width: 375px;
     height: 75px;
-    border-radius: 8px;
+    border-radius: 2px;
     border: none;
     font-family: 'Vazirmatn';
     font-weight: bold;
@@ -57,11 +57,29 @@
     cursor: text;
 }
 
+.reviewContentInput::-webkit-scrollbar {
+    border-right: .5px rgba(255, 255, 255, 87%) solid;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.reviewContentInput::-webkit-scrollbar-thumb {
+    background-color: #121212;
+}
+
+textarea {
+    border: none;
+}
+
+textarea:focus, input:focus{
+    outline: 0;
+}
+
 
 .postRvwBtn {
     padding: 20px;
     width: 416px;
-    border-radius: 8px;
+    border-radius: 4px;
     border: none;
     font-family: 'Vazirmatn';
     color: rgba(255, 255, 255, 87%);

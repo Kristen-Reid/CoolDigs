@@ -46,12 +46,13 @@ const PostReviews = ({ spot }) => {
 
         if (validationErrors.length === 0) {
             let create = await dispatch(createReview(reviewForm));
+            setTitle('');
             setContent('');
             setHasSubmitted(false);
             setValidationErrors([]);
-            if (create) {
-                history.push(`/spots/${spot?.id}`)
-            }
+            // if (create) {
+            //     history.push(`/spots/${spot?.id}`)
+            // }
         }
 
         // setTitle('');

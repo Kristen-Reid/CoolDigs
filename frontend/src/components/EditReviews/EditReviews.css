@@ -68,6 +68,7 @@
 .editContentInput::-webkit-scrollbar-thumb {
     background-color: #121212;
 }
+
 textarea {
     border: none;
 }
