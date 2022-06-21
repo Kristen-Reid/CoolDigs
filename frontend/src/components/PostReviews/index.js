@@ -61,18 +61,18 @@ const PostReviews = ({ spot }) => {
 
     return (
         <div className='postReviewContainer'>
-
             <form onSubmit={onSubmit}>
             <div className='errors'>
                 {showError && (
-                <ul className="errors">
+                    <ul className="errors">
                     {validationErrors.map(error => (
                         <li key={error}>{error}</li>
-                    ))}
+                        ))}
                 </ul>
                 )
-                }
+            }
                 <div className='reviewContent'>
+                    <h2><span>Leave a review :</span></h2>
                     <input
                         className='reviewTitleInput'
                         type='text'

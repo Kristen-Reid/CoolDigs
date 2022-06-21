@@ -51,6 +51,7 @@ const SpotDetail = () => {
                 )}
 
             <PostReviews spot={spot} />
+            
             {reviews?.length === 1 ? (
                 <div className='rvwCount'>
                     {reviews?.length} Review
