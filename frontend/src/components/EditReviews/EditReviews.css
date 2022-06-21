@@ -61,16 +61,12 @@
 
 .editContentInput::-webkit-scrollbar {
     border-right: .5px rgba(255, 255, 255, 87%) solid;
-    border-left: .5px rgba(255, 255, 255, 87%) solid;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
-    background-color: #121212;
 }
 
 .editContentInput::-webkit-scrollbar-thumb {
     background-color: #121212;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
 }
 textarea {
     border: none;

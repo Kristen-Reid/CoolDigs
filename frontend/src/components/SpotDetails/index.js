@@ -41,7 +41,7 @@ const SpotDetail = () => {
                 <h2 className='spotTitle'>{spot?.title}</h2>
                 <p className='spotPrice'>{`$${spot?.price}`}</p>
                 <p className='spotStateAndCity'>{`${spot?.city}, ${spot?.state}`}</p>
-                <div className='spotsDescrip'><p>{`${spot?.description}`}</p></div>
+                <div><p className='spotsDescrip'>{`${spot?.description}`}</p></div>
                 </div>
                 {user?.id === spot?.userId && (
                 <div className='spotsBtnContainer'>
