@@ -36,7 +36,7 @@
 .deletePostBtn {
     padding: 20px;
     width: 316px;
-    border-radius: 8px;
+    border-radius: 4px;
     border: none;
     font-family: 'Vazirmatn';
     color: rgba(255, 255, 255, 87%);
@@ -47,8 +47,6 @@
     transition: box-shadow .2s .2s ease, transform .4s ease;
 }
 
-
-
 .deletePostBtn:hover {
     cursor: pointer;
     background-color: red;
@@ -58,7 +56,25 @@
     transform: translateY(-3px);
 }
 
-
-.deletePostBtn2 {
+.deleteReviewBtn {
+    padding: 20px;
+    width: 316px;
+    border-radius: 4px;
+    border: none;
+    font-family: 'Vazirmatn';
     color: rgba(255, 255, 255, 87%);
+    letter-spacing: 1.2px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #343D73;
+    transition: box-shadow .2s .2s ease, transform .4s ease;
+}
+
+.deleteReviewBtn:hover {
+    cursor: pointer;
+    background-color: red;
+    color: rgba(255, 255, 255, 87%);
+    font-weight: bold;
+    font-size: 20px;
+    transform: translateY(-3px);
 }

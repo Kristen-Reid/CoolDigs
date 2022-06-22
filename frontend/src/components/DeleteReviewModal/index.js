@@ -3,15 +3,15 @@ import DeleteReview from './DeleteReview';
 import { Modal } from '../../context/Modal';
 
 
-const DeletePostModal = ({ spotId }) => {
+const DeleteReviewModal = ({ review, hasDeleted, setHasDeleted }) => {
     const [showModal, setShowModal] = useState(false);
 
     return (
         <>
-            <a  className='spotsDeleteBtn spotsBtnTxt' onClick={() => setShowModal(true)}>Delete Post</a>
+            <a  className='rvwBtnTxt  spotsBtnTxt' onClick={() => setShowModal(true)}>Delete Review</a>
             {showModal && (
                 <Modal onClose={() => setShowModal(false)}>
-                    <DeletePost spotId={spotId} />
+                    <DeleteReview  review={review} hasDeleted={hasDeleted} setHasDeleted={setHasDeleted}/>
                 </Modal>
             )}
         </>

@@ -5,6 +5,7 @@ import { deleteSpot, getASpot } from '../../store/spots';
 import { deleteReview } from '../../store/reviews';
 import PostReviews from '../PostReviews';
 import DeletePostModal from '../DeletePostModal';
+import DeleteReviewModal from '../DeleteReviewModal';
 import EditReviewsModal from '../EditReviews';
 import '../SpotDetails/SpotDetails.css';
 
@@ -75,7 +76,8 @@ const SpotDetail = () => {
                                 <EditReviewsModal review={review} />
                             </div>
                             <div className='rvwDeleteBtn'>
-                                <a className='rvwBtnTxt' onClick={async () => { await dispatch(deleteReview(review?.id)); setHasDeleted(!hasDeleted) }}>Delete Review</a>
+                                    {/* <a className='rvwBtnTxt' onClick={async () => { await dispatch(deleteReview(review?.id)); setHasDeleted(!hasDeleted) }}>Delete Review</a> */}
+                                    <DeleteReviewModal review={review} hasDeleted={hasDeleted} setHasDeleted={setHasDeleted} />
                             </div>
                         </div>
                         )}

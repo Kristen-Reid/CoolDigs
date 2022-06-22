@@ -17,8 +17,8 @@ const DeletePost = ({ spotId }) => {
                     <h2>Delete Spot?</h2>
                     <p>Are you sure you want to delete this spot?</p>
                 </div>
-                <div className='deletePostBt'>
-                    <button className='deletePostBtn' onClick={() => { dispatch(deleteSpot(spotId)); history.push(`/spots/`) }}>Delete Spot</button>
+                <div className='deletePostBtnContainer'>
+                    <button className='deletePostBtn' onClick={ async () => { await dispatch(deleteSpot(spotId)); history.push(`/spots/`) }}>Delete Spot</button>
                 </div>
             </div>
         </div>
