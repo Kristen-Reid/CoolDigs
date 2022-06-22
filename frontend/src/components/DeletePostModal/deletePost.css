@@ -1,0 +1,64 @@
+.deletePostContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 420px;
+    height: auto;
+    margin: 75px;
+    padding: 25px 30px 30px 30px;
+    background-color: rgba(252, 248, 248, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.deletePostBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.deletePostBox h2 {
+    color: red;
+    font-family: 'Vazirmatn';
+    font-size: 28px;
+}
+
+
+.deletePostBox p {
+    color: #d5cbcb;
+    font-family: 'Vazirmatn';
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.deletePostBtn {
+    padding: 20px;
+    width: 316px;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Vazirmatn';
+    color: rgba(255, 255, 255, 87%);
+    letter-spacing: 1.2px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #343D73;
+    transition: box-shadow .2s .2s ease, transform .4s ease;
+}
+
+
+
+.deletePostBtn:hover {
+    cursor: pointer;
+    background-color: red;
+    color: rgba(255, 255, 255, 87%);
+    font-weight: bold;
+    font-size: 20px;
+    transform: translateY(-3px);
+}
+
+
+.deletePostBtn2 {
+    color: rgba(255, 255, 255, 87%);
+}

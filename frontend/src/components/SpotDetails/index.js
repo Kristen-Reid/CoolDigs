@@ -4,6 +4,7 @@ import { useHistory, useParams } from 'react-router-dom';
 import { deleteSpot, getASpot } from '../../store/spots';
 import { deleteReview } from '../../store/reviews';
 import PostReviews from '../PostReviews';
+import DeletePostModal from '../DeletePostModal';
 import EditReviewsModal from '../EditReviews';
 import '../SpotDetails/SpotDetails.css';
 
@@ -46,12 +47,13 @@ const SpotDetail = () => {
                 {user?.id === spot?.userId && (
                 <div className='spotsBtnContainer'>
                     <a className='spotsEditBtn spotsBtnTxt' href={`/spots/${spot?.id}/edit`}>Edit Spot</a>
-                    <a className='spotsDeleteBtn spotsBtnTxt' href={`/spots/`} onClick={() => dispatch(deleteSpot(id)) }>Delete Spot</a>
+                    {/* <a className='spotsDeleteBtn spotsBtnTxt' href={`/spots/`} onClick={() => dispatch(deleteSpot(id)) }>Delete Spot</a> */}
+                    <DeletePostModal spotId={id} />
                 </div>
                 )}
 
             <PostReviews spot={spot} />
-            
+
             {reviews?.length === 1 ? (
                 <div className='rvwCount'>
                     {reviews?.length} Review
