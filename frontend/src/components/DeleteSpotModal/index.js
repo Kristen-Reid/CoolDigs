@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import DeletePost from './DeletePost';
+import DeleteSpot from './DeleteSpot';
 import { Modal } from '../../context/Modal';
 
 
-const DeletePostModal = ({ spotId }) => {
+const DeleteSpotModal = ({ spotId }) => {
     const [showModal, setShowModal] = useState(false);
 
     return (
@@ -11,7 +11,10 @@ const DeletePostModal = ({ spotId }) => {
             <a  className='spotsDeleteBtn spotsBtnTxt' onClick={() => setShowModal(true)}>Delete Post</a>
             {showModal && (
                 <Modal onClose={() => setShowModal(false)}>
-                    <DeletePost spotId={spotId} />
+                    <DeleteSpot
+                        spotId={spotId}
+                        onClose={() => setShowModal(false)}
+                    />
                 </Modal>
             )}
         </>
@@ -19,4 +22,4 @@ const DeletePostModal = ({ spotId }) => {
 }
 
 
-export default DeletePostModal;
+export default DeleteSpotModal;

@@ -19,7 +19,7 @@ const EditReviewsModal = ({ review }) => {
             <a className='editRvwLink' onClick={() => setShowModal(true)}>Edit Review</a>
             {showModal && (
                 <Modal onClose={() => setShowModal(false)}>
-                    <EditReviewsForm review={review} setShowModal={setShowModal}/>
+                    <EditReviewsForm review={review} setShowModal={setShowModal} onClose={() => setShowModal(false)} />
                 </Modal>
             )}
         </>

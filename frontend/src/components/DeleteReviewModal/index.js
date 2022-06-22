@@ -11,7 +11,12 @@ const DeleteReviewModal = ({ review, hasDeleted, setHasDeleted }) => {
             <a  className='rvwBtnTxt  spotsBtnTxt' onClick={() => setShowModal(true)}>Delete Review</a>
             {showModal && (
                 <Modal onClose={() => setShowModal(false)}>
-                    <DeleteReview  review={review} hasDeleted={hasDeleted} setHasDeleted={setHasDeleted}/>
+                    <DeleteReview
+                        review={review}
+                        hasDeleted={hasDeleted}
+                        setHasDeleted={setHasDeleted}
+                        onClose={() => setShowModal(false)}
+                    />
                 </Modal>
             )}
         </>

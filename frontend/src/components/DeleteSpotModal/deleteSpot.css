@@ -1,4 +1,4 @@
-.deletePostContainer {
+.deleteSpotContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,32 +8,32 @@
     margin: 75px;
     padding: 25px 30px 30px 30px;
     background-color: rgba(252, 248, 248, 0.2);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     border-radius: 8px;
     text-align: center;
 }
 
-.deletePostBox {
+.deleteSpotBox {
     display: flex;
     flex-direction: column;
 }
 
-.deletePostBox h2 {
+.deleteSpotBox h2 {
     color: red;
     font-family: 'Vazirmatn';
     font-size: 28px;
 }
 
 
-.deletePostBox p {
-    color: #d5cbcb;
+.deleteSpotBox p {
+    color: #121212;
     font-family: 'Vazirmatn';
     font-size: 22px;
     font-weight: bold;
     text-align: center;
 }
 
-.deletePostBtn {
+.deleteSpotBtn {
     padding: 20px;
     width: 316px;
     border-radius: 4px;
@@ -41,13 +41,13 @@
     font-family: 'Vazirmatn';
     color: rgba(255, 255, 255, 87%);
     letter-spacing: 1.2px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     background-color: #343D73;
     transition: box-shadow .2s .2s ease, transform .4s ease;
 }
 
-.deletePostBtn:hover {
+.deleteSpotBtn:hover {
     cursor: pointer;
     background-color: red;
     color: rgba(255, 255, 255, 87%);
@@ -66,7 +66,7 @@
     letter-spacing: 1.2px;
     font-size: 16px;
     font-weight: bold;
-    background-color: #343D73;
+    background-color: #5060b8;
     transition: box-shadow .2s .2s ease, transform .4s ease;
 }
 
@@ -76,5 +76,29 @@
     color: rgba(255, 255, 255, 87%);
     font-weight: bold;
     font-size: 20px;
+    transform: translateY(-3px);
+}
+
+.cancelRvwBtn {
+    padding: 20px;
+    margin-top: 15px;
+    width: 316px;
+    border-radius: 4px;
+    border: none;
+    font-family: 'Vazirmatn';
+    color: rgba(255, 255, 255, 87%);
+    letter-spacing: 1.2px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #5060b8;
+    transition: box-shadow .2s .2s ease, transform .4s ease;
+}
+
+.cancelRvwBtn:hover {
+    cursor: pointer;
+    background-color: #0a599a;
+    color: rgba(255, 255, 255, 87%);
+    font-weight: bold;
+    font-size: 18px;
     transform: translateY(-3px);
 }

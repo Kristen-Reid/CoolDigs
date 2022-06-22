@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { updateReview } from '../../store/reviews';
 import '../EditReviews/EditReviews.css';
 
-const EditReviewsForm = ({review, setShowModal}) => {
+const EditReviewsForm = ({review, setShowModal, onClose}) => {
     const dispatch = useDispatch();
 
     const [title, setTitle] = useState(review?.title);
@@ -73,6 +73,9 @@ const EditReviewsForm = ({review, setShowModal}) => {
                         type='submit'
                         className='editRvwBtn'
                     >Edit Review</button>
+                </div>
+                <div>
+                    <button type='submit' className='cancelRvwBtn cancelEdit' onClick={() => onClose()}>Cancel</button>
                 </div>
             </form>
         </div>

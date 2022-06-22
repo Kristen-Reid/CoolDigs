@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { deleteReview } from '../../store/reviews';
+import { deleteSpot } from '../../store/spots';
 import { useHistory } from 'react-router-dom';
-import '../DeleteReviewModal/deleteReview.css';
+import './deleteSpot.css';
 
 
 
-const DeletePost = ({ review, hasDeleted, setHasDeleted, onClose }) => {
+const DeleteSpot = ({ spotId, onClose }) => {
     const dispatch = useDispatch();
     const history = useHistory();
 
@@ -14,11 +14,11 @@ const DeletePost = ({ review, hasDeleted, setHasDeleted, onClose }) => {
         <div className='deleteSpotContainer'>
             <div className='deleteSpotBox'>
                 <div className='deleteSpotMessage'>
-                    <h2>Delete Review?</h2>
-                    <p>Are you sure you want to delete this review?</p>
+                    <h2>Delete Spot?</h2>
+                    <p>Are you sure you want to delete this spot?</p>
                 </div>
-                <div className='deleteReviewBtnContainer'>
-                    <button className='deleteReviewBtn' onClick={async () => { await dispatch(deleteReview(review?.id)); setHasDeleted(!hasDeleted) }}>Delete Review</button>
+                <div className='deleteSpotBtnContainer'>
+                    <button className='deleteSpotBtn' onClick={ async () => { await dispatch(deleteSpot(spotId)); history.push(`/spots/`) }}>Delete Spot</button>
                 </div>
                 <div>
                     <button type='submit' className='cancelRvwBtn' onClick={() => onClose()}>Cancel</button>
@@ -29,4 +29,4 @@ const DeletePost = ({ review, hasDeleted, setHasDeleted, onClose }) => {
 }
 
 
-export default DeletePost;
+export default DeleteSpot;

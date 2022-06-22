@@ -4,7 +4,7 @@ import { useHistory, useParams } from 'react-router-dom';
 import { deleteSpot, getASpot } from '../../store/spots';
 import { deleteReview } from '../../store/reviews';
 import PostReviews from '../PostReviews';
-import DeletePostModal from '../DeletePostModal';
+import DeletePostModal from '../DeleteSpotModal';
 import DeleteReviewModal from '../DeleteReviewModal';
 import EditReviewsModal from '../EditReviews';
 import '../SpotDetails/SpotDetails.css';
