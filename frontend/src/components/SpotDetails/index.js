@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
-import { deleteSpot, getASpot } from '../../store/spots';
-import { deleteReview } from '../../store/reviews';
+import { getASpot } from '../../store/spots';
 import PostReviews from '../PostReviews';
 import DeletePostModal from '../DeleteSpotModal';
 import DeleteReviewModal from '../DeleteReviewModal';
@@ -48,7 +47,6 @@ const SpotDetail = () => {
                 {user?.id === spot?.userId && (
                 <div className='spotsBtnContainer'>
                     <a className='spotsEditBtn spotsBtnTxt' href={`/spots/${spot?.id}/edit`}>Edit Spot</a>
-                    {/* <a className='spotsDeleteBtn spotsBtnTxt' href={`/spots/`} onClick={() => dispatch(deleteSpot(id)) }>Delete Spot</a> */}
                     <DeletePostModal spotId={id} />
                 </div>
                 )}
@@ -65,7 +63,7 @@ const SpotDetail = () => {
                 </div>
                         )}
             <div className='reviewContainer'>
-                {reviews?.reverse().map(review => (
+                {spot?.Reviews?.map(review => (
                     <div key={review?.id} className='reviewCard'>
                         <p className='rvwTitle'>{review?.title}</p>
                         <p className='rvwUserName'>{review?.User?.username}</p>
@@ -76,13 +74,12 @@ const SpotDetail = () => {
                                 <EditReviewsModal review={review} />
                             </div>
                             <div className='rvwDeleteBtn'>
-                                    {/* <a className='rvwBtnTxt' onClick={async () => { await dispatch(deleteReview(review?.id)); setHasDeleted(!hasDeleted) }}>Delete Review</a> */}
                                     <DeleteReviewModal review={review} hasDeleted={hasDeleted} setHasDeleted={setHasDeleted} />
                             </div>
                         </div>
                         )}
                     </div>
-                ))}
+                )).reverse()}
             </div>
         </div>
     )
