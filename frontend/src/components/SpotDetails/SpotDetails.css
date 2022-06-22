@@ -65,23 +65,25 @@
 
 .spotsEditBtn {
     display: flex;
+    padding: 10px 10px 0 10px;
     margin: 10px;
     border: none;
     width: 90px;
     height: 40px;
     border-radius: 10px;
-    background-color: rgb(90, 81, 81);
+    background-color: #5060b8;
     font-size: 14px;
     letter-spacing: 1px;
 }
 
 .spotsDeleteBtn {
+    padding: 10px 10px 0 10px;
     margin: 10px;
     border: none;
     width: 90px;
     height: 40px;
     border-radius: 10px;
-    background-color: rgb(90, 81, 81);
+    background-color: #5060b8;
     font-size: 14px;
     justify-content: center;
     letter-spacing: 1px;
@@ -89,10 +91,12 @@
 
 .spotsDeleteBtn:hover {
     background-color: red;
+    cursor: pointer;
 }
 
 .spotsEditBtn:hover {
     background-color: #248bde;
+    cursor: pointer;
 }
 
 .spotsBtnTxt {
