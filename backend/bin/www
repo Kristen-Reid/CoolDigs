@@ -10,7 +10,7 @@ db.sequelize
     .then(() => {
         console.log('Database connection success! Sequelize is ready to use...');
 
-        app.listen(port, () => console.log(`http://localhost:${port}`));
+        app.listen(port, () => console.log(`${port}`));
     })
     .catch((err) => {
         console.log('Database connection failure.');
