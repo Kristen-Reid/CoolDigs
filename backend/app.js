@@ -5,7 +5,7 @@ const csurf = require('csurf');
 const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
 const { ValidationError } = require('sequelize');
-require('dotenv').config()
+require('dotenv').config({path: '\\wsl.localhost\Ubuntu\home\kristen\appacademy\mod-5\week-16\cooldigs\backend\.env' })
 
 const routes = require('./routes');
 const { environment } = require('./config');
