@@ -1,3 +1,4 @@
+import dotenv from 'dotenv';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
@@ -10,6 +11,7 @@ import configureStore from './store';
 import * as sessionActions from './store/session';
 import { restoreCSRF, csrfFetch } from "./store/csrf";
 import './index.css';
+dotenv.config();
 
 const store = configureStore();
 
