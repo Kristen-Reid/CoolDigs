@@ -21,9 +21,6 @@ if (process.env.NODE_ENV === 'production') {
     });
 };
 
-if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').config();
-}
 
 if (process.env.NODE_ENV !== 'production') {
     router.get('/api/csrf/restore', (req, res) => {
