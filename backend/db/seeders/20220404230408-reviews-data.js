@@ -1,8 +1,14 @@
 'use strict';
 
+let options = {};
+if (process.env.NODE_ENV === 'production') {
+  options.schema = process.env.SCHEMA;
+};
+
 module.exports = {
-  async up (queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('Reviews', [
+  async up(queryInterface, Sequelize) {
+    options.tableName = 'Reviews';
+    await queryInterface.bulkInsert(options, [
       {
         title: 'Beautiful hilltop oasis!',
         content: 'This is a great place! We were looking for a campsite pretty close to Ann Arbor for the weekend with another family and I’m so glad we decided to give Hipcamp and this site a try. Plenty of space for two tents, possible to drive up for easy unloading, beautiful hilltop views, picnic table, a fire pit and dry firewood, nice people, chickens and two friendly goats. Campsite bathroom is a basic composting toilet in an old barn - not the highlight but fine and no problem. The campsite connects to a mile-long loop through a nature preserve that is beautiful! Easy walk with dogs and gorgeous little pond. We heard coyotes, saw geese and herons, saw deer. Really neat spot in pretty secluded area. Hosts were super friendly and even brought us hot coffee on a rainy morning. Thanks, Kat and Doug!',
@@ -309,6 +315,7 @@ We would definitely stay here again.`,
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('Reviews', null, {});
+    options.tableName = 'Reviews';
+    await queryInterface.bulkDelete(options);
   }
 };

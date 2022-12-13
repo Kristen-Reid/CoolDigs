@@ -1,8 +1,14 @@
 'use strict';
 
+let options = {};
+if (process.env.NODE_ENV === 'production') {
+  options.schema = process.env.SCHEMA;
+};
+
 module.exports = {
-  async up (queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('Images', [{
+  async up(queryInterface, Sequelize) {
+    options.tableName = 'Images';
+    await queryInterface.bulkInsert(options, [{
       image: 'https://t4.ftcdn.net/jpg/02/16/03/69/360_F_216036942_jQXSp24vd67pmujlr8xkZSDJZbyQyNwX.jpg',
       spotId: 1
     },
@@ -85,7 +91,8 @@ module.exports = {
     ], {});
   },
 
-  async down (queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('Images', null, {});
+  async down(queryInterface, Sequelize) {
+    options.tableName = 'Images';
+    await queryInterface.bulkDelete(options);
   }
 };

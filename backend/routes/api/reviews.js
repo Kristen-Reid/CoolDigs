@@ -9,8 +9,6 @@ const { Review, Spot, User } = require('../../db/models');
 router.post('/new', requireAuth, asyncHandler(async (req, res) => {
     const review = await Review.create(req.body);
 
-    console.log(review)
-
     res.json(review);
 }));
 

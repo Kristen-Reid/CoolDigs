@@ -1,8 +1,14 @@
 'use strict';
 
+let options = {};
+if (process.env.NODE_ENV === 'production') {
+  options.schema = process.env.SCHEMA;
+};
+
 module.exports = {
-  async up (queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('Spots', [
+  async up(queryInterface, Sequelize) {
+    options.tableName = 'Spots';
+    await queryInterface.bulkInsert(options, [
       {
         title: 'Hilltop Hangout - Tents & Hammocks',
         city: 'Chelsea',
@@ -313,6 +319,7 @@ Please plan to leave no trace.`,
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('Spots', null, {});
+    options.tableName = 'Spots';
+    await queryInterface.bulkDelete(options);
   }
 };
