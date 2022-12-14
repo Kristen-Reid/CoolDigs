@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "js-tokens": "^4.0.0",
     "loose-envify": "^1.4.0",
     "object-assign": "^4.1.1",
@@ -31,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/Kristen-Reid/CoolDigs/issues"
   },
-  "homepage": "https://github.com/Kristen-Reid/CoolDigs#readme"
+  "homepage": "https://github.com/Kristen-Reid/CoolDigs#readme",
+  "devDependencies": {
+    "dotenv-webpack": "^8.0.1"
+  }
 }
