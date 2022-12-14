@@ -22,7 +22,7 @@
     "sequelize": "npm run --prefix backend sequelize",
     "sequelize-cli": "npm run --prefix backend sequelize-cli",
     "build": "npm install && npm run render-postbuild && npm run build && npm run sequelize --prefix backend db:migrate && npm run sequelize --prefix backend db:seed:all",
-    "start": "npm install --save-dev cross-env && npm start --prefix backend"
+    "start": "npm start --prefix backend"
   },
   "repository": {
     "type": "git",
