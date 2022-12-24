@@ -41,36 +41,36 @@ module.exports = {
         defaultValue: Sequelize.fn('now')
       }
     }, options);
-    await queryInterface.addColumn(options, 'username', {
-      type: Sequelize.STRING(30),
-      allowNull: false,
-    });
-    await queryInterface.addColumn(options, 'email', {
-      type: Sequelize.STRING(256),
-      allowNull: false,
-      unique: true
-    });
-    await queryInterface.addColumn(options, 'hashedPassword', {
-      type: Sequelize.STRING.BINARY,
-      allowNull: false
-    });
-    await queryInterface.addColumn(options, 'createdAt', {
-      type: Sequelize.DATE,
-      allowNull: false,
-      defaultValue: Sequelize.fn('now')
-    });
-    await queryInterface.addColumn(options, 'updatedAt', {
-      type: Sequelize.DATE,
-      allowNull: false,
-      defaultValue: Sequelize.fn('now')
-    });
+    // await queryInterface.addColumn(options, 'username', {
+    //   type: Sequelize.STRING(30),
+    //   allowNull: false,
+    // });
+    // await queryInterface.addColumn(options, 'email', {
+    //   type: Sequelize.STRING(256),
+    //   allowNull: false,
+    //   unique: true
+    // });
+    // await queryInterface.addColumn(options, 'hashedPassword', {
+    //   type: Sequelize.STRING.BINARY,
+    //   allowNull: false
+    // });
+    // await queryInterface.addColumn(options, 'createdAt', {
+    //   type: Sequelize.DATE,
+    //   allowNull: false,
+    //   defaultValue: Sequelize.fn('now')
+    // });
+    // await queryInterface.addColumn(options, 'updatedAt', {
+    //   type: Sequelize.DATE,
+    //   allowNull: false,
+    //   defaultValue: Sequelize.fn('now')
+    // });
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Users', options);
-    await queryInterface.removeColumn(options, 'username');
-    await queryInterface.removeColumn(options, 'email');
-    await queryInterface.removeColumn(options, 'hashedPassword');
-    await queryInterface.removeColumn(options, 'createdAt');
-    await queryInterface.removeColumn(options, 'updatedAt');
+    // await queryInterface.removeColumn(options, 'username');
+    // await queryInterface.removeColumn(options, 'email');
+    // await queryInterface.removeColumn(options, 'hashedPassword');
+    // await queryInterface.removeColumn(options, 'createdAt');
+    // await queryInterface.removeColumn(options, 'updatedAt');
   }
 };
