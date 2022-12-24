@@ -311,7 +311,7 @@ We would definitely stay here again.`,
         userId: 4,
         spotId: 20
       }
-    ], {});
+    ]);
   },
 
   async down(queryInterface, Sequelize) {

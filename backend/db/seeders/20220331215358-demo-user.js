@@ -40,7 +40,7 @@ module.exports = {
         username: 'garyk815',
         hashedPassword: bcrypt.hashSync('password6')
       }
-    ], {});
+    ]);
   },
 
   async down(queryInterface, Sequelize) {

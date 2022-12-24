@@ -88,7 +88,7 @@ module.exports = {
         image: 'https://p0.pxfuel.com/preview/68/207/765/tent-month-night-camping.jpg',
         spotId: 20
       }
-    ], {});
+    ]);
   },
 
   async down(queryInterface, Sequelize) {

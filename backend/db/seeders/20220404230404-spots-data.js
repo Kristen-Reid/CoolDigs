@@ -315,7 +315,7 @@ Space for tents along the river in the sun or by the creek in the forest. Rustic
 Please plan to leave no trace.`,
         userId: 3
       }
-    ], {});
+    ]);
   },
 
   async down(queryInterface, Sequelize) {
