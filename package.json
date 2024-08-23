@@ -34,5 +34,8 @@
   "bugs": {
     "url": "https://github.com/Kristen-Reid/CoolDigs/issues"
   },
-  "homepage": "https://github.com/Kristen-Reid/CoolDigs#readme"
+  "homepage": "https://github.com/Kristen-Reid/CoolDigs#readme",
+  "devDependencies": {
+    "@babel/core": "^7.25.2"
+  }
 }
