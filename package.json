@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@babel/core": "^7.25.2",
     "cross-per-env": "^1.0.5",
     "dotenv": "^16.0.3",
     "js-tokens": "^4.0.0",
@@ -34,8 +35,5 @@
   "bugs": {
     "url": "https://github.com/Kristen-Reid/CoolDigs/issues"
   },
-  "homepage": "https://github.com/Kristen-Reid/CoolDigs#readme",
-  "devDependencies": {
-    "@babel/core": "^7.25.2"
-  }
+  "homepage": "https://github.com/Kristen-Reid/CoolDigs#readme"
 }
