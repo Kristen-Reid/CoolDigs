@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "babel": "^6.23.0",
     "cross-per-env": "^1.0.5",
     "dotenv": "^16.0.3",
     "js-tokens": "^4.0.0",
